@@ -1,0 +1,22 @@
+*{
+    Font-size: 26px;
+}
+
+.section-team {
+    background: blue;
+    width: 1000%;
+    margin: 0 auto;
+    
+}
+.section-team__info {
+ 
+ border: black 1px solid;
+ display:flex;
+ 
+ 
+}
+.section-team__info-box{
+    border: black 1px solid;
+    display:flex;
+    padding: 20px;
+}
