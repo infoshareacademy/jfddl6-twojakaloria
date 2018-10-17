@@ -3,20 +3,57 @@
 }
 
 .section-team {
-    background: blue;
+    background: grey;
     width: 1000%;
     margin: 0 auto;
+    max-width: 1280px;
+    padding: 20px;
+    
+   
+    
+    
+     
     
 }
 .section-team__info {
+ display: flex;
+ padding: 20px;
  
- border: black 1px solid;
- display:flex;
+
+ 
+ 
+ 
+ 
  
  
 }
 .section-team__info-box{
-    border: black 1px solid;
+    
+    
+    padding: 20px;
+    width: 320px;
+    margin: 20px;
+   
+   
+
+    
+    
+    
+}
+.img{
+    max-width: 25px;
+    max-height: 25px;
+}
+.section-team-title{
     display:flex;
+    justify-content: center;
+    
+}
+.section-team__info-box-text{
     padding: 20px;
 }
+.section-team__info-box-name{
+    display: flex;
+    justify-content: center;
+}
+
