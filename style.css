@@ -33,6 +33,14 @@
      border: 2px solid red;
  }
 
- .section-more--child--fas {
-     font-size: 128px;
+ .section-more--header {
+     font-size: 2em;
+     text-transform: uppercase;
+ }
+
+ .section-more--text {
+     box-sizing: border-box;
+     padding: 3% 20% 10%;
+     font-size: 1.25em;
+     font-weight: 900;
  }
