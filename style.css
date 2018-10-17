@@ -1,0 +1,19 @@
+.section {
+    height: 20vh;
+}
+
+.section-hero {
+    background-color: #FFC312;
+}
+
+.section-features {
+   background-color: #F79F1F;
+}
+
+.section-team {
+    background-color: #EE5A24;
+}
+
+.section-more {
+    background-color: #EA2027;
+}
