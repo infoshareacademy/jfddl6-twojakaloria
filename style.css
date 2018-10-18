@@ -40,7 +40,6 @@
 }
 
 .section__hero__button__sign{
-    /* display: block; */
     margin-top: 5%;
     font-family: 'Garineldo';
     background-color: white;
@@ -48,13 +47,59 @@
     padding:35px;
     border-radius: 50%;
 }
-@media only screen and (min-width: 100px){
-.section__hero {
-        height: 1000px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+
+.section__sign {
+    background-color: #F79F1F;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
+.section__sign__h1{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: black;
+    font-size:30px;
+    padding-top: 20px;
+}
+.section__sign__p{
+    margin-top: 10px;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 20px;
+}
+.section__sign__mail{
+    margin-top: 10px;
+    font-size: 15px;
+    width: 350px;
+    height: 40px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+    padding: 10px;
+}
+
+.section__sign__checkbox{
+    font-size: 25px;
+    padding: 10px;
+}
+.section__sign__checkbox__box{
+    width: 25px;
+    height: 25px;
+}
+
+.section__sign__button{
+    font-family: 'Garineldo';
+    background-color: white;
+    font-size: 220%;
+    width: 350px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 799px){
 
 }
