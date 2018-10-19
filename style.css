@@ -16,7 +16,8 @@ body {
 
 .nav__logo {
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
+  /* background-color: #FFC312; */
 }
 
 .nav__img {
