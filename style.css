@@ -3,8 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: grey;
+    background: #EA2027;
     border: 1px solid black;
+    font-family: arial;
+    color: white;
 
 
 }
@@ -18,7 +20,6 @@
 
 .section-team__header {
     font-size: 1.5em;
-    text-transform: uppercase;
 }
 
 .section-team__text {
@@ -29,6 +30,7 @@
     max-width: 280px; 
     max-height: 280px;
     padding: 20px;
+    
     
    
 
@@ -61,8 +63,9 @@
     transform: translateX(-50%);
     font-size: 20px;
     text-decoration: none;
-    border: 3px solid black;
+    border: 3px solid #F79F1F;;
     color: black;
+    background: #EE5A24;
 
 
 }
