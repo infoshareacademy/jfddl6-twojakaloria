@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin: 0px;
     padding: 0px;
 }
@@ -9,6 +9,7 @@
     font-weight: normal;
     font-style: normal;
 }
+/* section hero */
 .section__hero{
     background-image: url('img/img.jpg');
     background-size: cover;
@@ -38,7 +39,6 @@
     color: black;
     font-size: 30px;
 }
-
 .section__hero__button__sign{
     margin-top: 5%;
     font-family: 'Garineldo';
@@ -47,7 +47,7 @@
     padding:35px;
     border-radius: 50%;
 }
-
+/* section sign */
 .section__sign {
     background-color: #F79F1F;
     display:flex;
