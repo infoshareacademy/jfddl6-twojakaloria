@@ -3,10 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  height: 200vh;
+  font-family: sans-serif;
 }
 
 .nav {
@@ -19,6 +16,7 @@ body {
 
 .nav__logo {
   margin: 0 auto;
+  padding: 10px;
 }
 
 .nav__img {
