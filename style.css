@@ -117,6 +117,7 @@
      }
 
      .section-more__imgback {
+        flex-shrink: 0;
         width: 20vh;
         height: 20vh;
      }
@@ -214,6 +215,7 @@
      .section-more__imgback {
         width: 20vh;
         height: 20vh;
+        flex-shrink: 0;
      }
 
      .section-more__child1 {
