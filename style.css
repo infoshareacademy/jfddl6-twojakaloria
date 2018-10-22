@@ -1,6 +1,6 @@
 
 #more {
-     font-family: 'PT Sans', sans-serif;
+     font-family: 'Roboto', sans-serif;
      color: white;
  }
 
@@ -20,7 +20,7 @@
  .section-more__child {
      display: flex;
      flex-direction: column;
-     flex-basis: 50%;
+     flex-basis: 48%;
      align-items: center;
      box-shadow: 0px 0px 21px -1px rgba(87, 87, 86, 1);
      border-radius: 3px;
@@ -39,9 +39,10 @@
      background-position: center;
      display: flex;
      flex-direction: column;
-     flex-basis: 50%;
+     flex-basis: 48%;
      align-items: center;
-     border-radius: 3px;
+     border-radius: 2px;
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
  }
 
  .section-more__img2 {
@@ -75,7 +76,6 @@
      margin: 5% auto;
      padding: 3% 20% 10%;
      font-size: 1rem;
-     font-weight: 900;
      text-align: justify;
  }
 
@@ -84,7 +84,8 @@
      justify-content: center;
      align-items: center;
      border-radius: 50%;
-     border: 3px solid black;
+     border: 1px solid black;
+     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
      width: 15vh;
      height: 15vh;
      background-color: red;
@@ -113,7 +114,6 @@
      }
 
      .section-more__imgback {
-        flex-shrink: 0;
         width: 20vh;
         height: 20vh;
      }
@@ -206,6 +206,7 @@
      .section-more__img5,
      .section-more__img6 {
          flex-basis: 100vh;
+         flex-shrink: 0;
      }
 
      .section-more__imgback {
