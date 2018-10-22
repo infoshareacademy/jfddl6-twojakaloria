@@ -1,5 +1,7 @@
 body{
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+
 }
 .section-team__container {
     display: flex;
@@ -9,8 +11,6 @@ body{
     border: 1px solid black;
     font-family: arial;
     color:white;
-
-
 }
 
 .section-team__child {
@@ -18,10 +18,14 @@ body{
     margin: 0px 0px 20px 0px;
     padding: 20px;
     position:relative;
+    box-sizing: border-box;
+    flex-basis: 25%;
 }
 
 .section-team__header {
     font-size: 1.5em;
+    text-shadow:5px 5px 10px black;
+
 }
 
 .section-team__text {
@@ -29,12 +33,11 @@ body{
     font-size: 1.25em;
     font-weight: 900;
     text-align: center;
-    max-width: 280px; 
     max-height: 280px;
     padding: 20px;
-    
-    
-   
+    text-shadow:5px 5px 10px black;
+
+
 
 }
 
@@ -42,7 +45,7 @@ body{
     width: 100% ;
     text-align: center;
     font-size: 2em;
-    
+
 }
 
 .section-team__img{
@@ -66,11 +69,27 @@ body{
     font-size: 20px;
     text-decoration: none;
     border: 3px solid #F79F1F;;
-    color: black;
+    color: white;
     background: #EE5A24;
+    transition: all 1s;
+
+
 }
 .section-team__link:hover{
     color:  #EE5A24;
-    background: black;
+    background: white;
 
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .section-team__child{
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section-team__child{
+        flex-basis: 100%;
+    }
 }
