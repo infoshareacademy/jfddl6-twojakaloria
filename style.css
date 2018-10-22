@@ -78,7 +78,7 @@
      box-sizing: border-box;
      margin: 5% auto;
      padding: 3% 20% 10%;
-     font-size: 1.25em;
+     font-size: 1rem;
      font-weight: 900;
      text-align: justify;
  }
@@ -112,8 +112,8 @@
 
      .section-more__text {
          box-sizing: border-box;
-         margin: 5% auto;
-         font-size: 1.25em;
+         font-size: 1rem;
+         flex-grow: 1;
      }
 
      .section-more__imgback {
@@ -199,7 +199,7 @@
 
      .section-more__text {
          box-sizing: border-box;
-         margin: 5% auto;
+         margin: 2% auto;
          font-size: 1.25em;
      }
 
