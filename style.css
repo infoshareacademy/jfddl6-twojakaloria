@@ -40,7 +40,6 @@ body{
     text-align: center;
     max-height: 280px;
     padding: 20px;
-    text-shadow:5px 5px 10px black;
     min-height: 150px;
 
 
@@ -51,6 +50,7 @@ body{
     width: 100% ;
     text-align: center;
     font-size: 2em;
+    margin-top: 20px;
 
 }
 
@@ -75,7 +75,7 @@ body{
     color: white;
     background: #EE5A24;
     transition: all 1s;
-    display: block;<<<<<<< feature/18-info
+    display: block;
     padding: 4px 20px;
     margin-top: 4px;
     border-radius: 30%;
