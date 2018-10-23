@@ -124,7 +124,7 @@ body{
     overflow: hidden;
 }
 .section-team__link {
-    
+
     text-align:center;
     font-size: 20px;
     text-decoration: none;
@@ -183,7 +183,7 @@ body{
 .nav__logo {
     margin: 0 auto;
     padding: 20px;
-    /* background-color: #FFC312; */
+
 }
 
 .nav__img {
@@ -295,7 +295,7 @@ body{
     color: black;
     font-size:30px;
     padding: 20px 10px 10px;
-    
+
 }
 .section__sign__p{
     margin-top: 10px;
