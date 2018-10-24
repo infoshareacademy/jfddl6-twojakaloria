@@ -110,19 +110,18 @@
     </section>
 
     <section id="sign" class="section section__sign">
-        
         <h1 class="section__sign__h1">Zapisz się na Premiere aplikacji!</h1>
-        
-        <p class="section__sign__p">Aliquid aspernatur recusandae debitis animi voluptates repellat, <br/>dolorum distinctio nisi iste, voluptas beatae officiis, quam reprehenderit?</p>
-        
-        <input type="text" name="mailtext"class="section__sign__mail"/>
-        
-        <div class="section__sign__checkbox">
-            <label><input class="section__sign__checkbox__box" type="checkbox" name="checkmail" > Sprawdź maila!</label>
-        </div>
-        
-        <button id="sign__button" class="section__sign__button"> Do Dzieła! </button>
-    
+        <form action="https://emaillabs-sender.herokuapp.com/" method="POST">
+            <input type="text" name="emails[]" class="section__sign__mail" placeholder="Wpisz swój e-mail">
+            <input type="hidden" name="subject" value="Premiera aplikacji Twoja Kaloria">
+            <input type="hidden" name="message" value="Witamy serdecznie. Premiera naszej aplikacji odbędzie się dnia: 17.12.2018 w Inkubatorze Przedsiębiorczości w Lublinie na ul.XXXXX. 
+            Informujemy iż powyższy mail został wysłany tylko 1 raz.">
+            <!-- <input type="hidden" name="from" value="mateusz.choma@infoshareacademy.com"> -->
+            <input type="hidden" name="from" value="krystianpietr@gmail.com">
+            <input type="hidden" name="fromName" value="Twoja Kaloria">
+            <input type="hidden" name="redirect" value="localhost/index2.html">
+            <input class="button" type="submit" value="Wyślij!">
+        </form>
     </section>
 
     <section id="contact" class="section section-contact">
