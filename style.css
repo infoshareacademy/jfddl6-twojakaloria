@@ -1,165 +1,3 @@
-.section-features {
-    background-color: #F79F1F;
-    font-family: sans-serif;
-}
-
-.section-features__title {
-    color: #eee;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-align: center;
-    padding: 20px;
-    font-size: 35px;
-    margin: 0;
-    text-shadow: 5px 5px 15px #000;
-}
-
-.section-features__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-features__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 0 auto;
-}
-
-
-.section-features__box-icon__img {
-    max-width: 100%;
-}
-
-.section-features__box__description {
-    padding: 15px;
-    text-align: center;
-    color: #eee;
-    text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-    .section-features__container {
-        flex-direction: row;
-    }
-
-    .section-features__title {
-        font-size: 50px;
-    }
-
-    .section-features__box {
-        padding: 5px;
-    }
-}
-
-body{
-    margin: 0;
-    padding: 0;
-
-}
-.section-team__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: #EA2027;
-    border: 1px solid black;
-    font-family: arial;
-    color:white;
-}
-
-.section-team__child {
-    text-align: center;
-    margin: 0px 0px 20px 0px;
-    padding: 20px;
-    position:relative;
-    box-sizing: border-box;
-    flex-basis: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.section-team__header {
-    font-size: 1.5em;
-    text-shadow:5px 5px 10px black;
-
-}
-
-.section-team__text {
-    box-sizing: border-box;
-    font-size: 1.25em;
-    font-weight: 900;
-    text-align: center;
-    max-height: 280px;
-    padding: 20px;
-    min-height: 150px;
-
-
-
-}
-
-.section-team__title {
-    width: 100% ;
-    text-align: center;
-    font-size: 2em;
-    margin-top: 20px;
-
-}
-
-.section-team__img{
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 50%;
-    border: 3px solid black;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: slategray;
-    overflow: hidden;
-}
-.section-team__link {
-    
-    text-align:center;
-    font-size: 20px;
-    text-decoration: none;
-    border: 3px dashed #F79F1F;;
-    color: white;
-    background: #EE5A24;
-    transition: all 1s;
-    display: block;
-    padding: 4px 20px;
-    margin-top: 4px;
-    border-radius: 30%;
-
-
-}
-
-.section-team__link:hover{
-    color:  #EE5A24;
-    background: white;
-
-}
-
-
-@media only screen and (max-width: 1400px) {
-    .section-team__child{
-        flex-basis: 50%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .section-team__child{
-        flex-basis: 100%;
-    }
-}
-
-
 *{
     box-sizing: border-box;
     margin: 0px;
@@ -172,6 +10,8 @@ body{
     font-style: normal;
 }
 
+/* section nav */
+
 .nav {
     display: flex;
     flex-direction: column;
@@ -183,7 +23,6 @@ body{
 .nav__logo {
     margin: 0 auto;
     padding: 20px;
-    /* background-color: #FFC312; */
 }
 
 .nav__img {
@@ -226,32 +65,32 @@ body{
         justify-content: flex-start;
         position: fixed;
     }
-
     .nav__links {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     .nav__logo {
         margin-left: 0;
     }
-
     .nav__item {
         display: flex;
         align-items: center;
     }
 }
 
+/* end of section nav */
 
-.section__hero{
+/* section hero */
+
+.section-hero{
     background-image: url('img/img.jpg');
     background-size: cover;
     display:flex;
     flex-direction: column;
     align-items: center;
 }
-.section__hero__h1{
+.section-hero__h1{
     text-transform: uppercase;
     margin-top:30vh;
     font-family: 'Courier New', Courier, monospace;
@@ -259,36 +98,190 @@ body{
     color: black;
     font-size: 50px;
 }
-.section__hero__p{
+.section-hero__p{
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.section__hero__p p{
+.section-hero__p p{
     text-align: center;
     margin-top: 5%;
     font-family: 'Courier New', Courier, monospace;
     color: black;
     font-size: 30px;
 }
-.section__hero__button__sign{
-    margin-top: 5%;
-    font-family: 'Garineldo';
-    background-color: white;
-    font-size: 220%;
-    padding:35px;
-    border-radius: 50%;
+.section-hero__button-sign{
+    padding:30px;
+    font-size: 20px;
+}
+/* end of section hero */
+
+/* section features */
+
+.section-features {
+    background-color: #F79F1F;
+    font-family: sans-serif;
 }
 
-.section__sign {
+.section-features__title {
+    color: #eee;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    margin: 0;
+    text-shadow: 5px 5px 15px #000;
+}
+
+.section-features__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-features__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.section-features__box-icon__img {
+    max-width: 100%;
+}
+
+.section-features__box__description {
+    padding: 15px;
+    text-align: center;
+    color: #eee;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .section-features__container {
+        flex-direction: row;
+    }
+
+    .section-features__title {
+        font-size: 50px;
+    }
+
+    .section-features__box {
+        padding: 5px;
+    }
+}
+/* end of section feautures */
+
+/* section team */
+
+.section-team__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #EA2027;
+    border: 1px solid black;
+    font-family: arial;
+    color:white;
+}
+
+.section-team__child {
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    padding: 20px;
+    position:relative;
+    box-sizing: border-box;
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-team__header {
+    font-size: 1.5em;
+    text-shadow:5px 5px 10px black;
+}
+
+.section-team__text {
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-weight: 900;
+    text-align: center;
+    max-height: 280px;
+    padding: 20px;
+    min-height: 150px;
+}
+
+.section-team__title {
+    width: 100% ;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.section-team__img{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: slategray;
+    overflow: hidden;
+}
+.section-team__link {
+    text-align:center;
+    font-size: 20px;
+    text-decoration: none;
+    border: 3px dashed #F79F1F;;
+    color: white;
+    background: #EE5A24;
+    transition: all 1s;
+    display: block;
+    padding: 4px 20px;
+    margin-top: 4px;
+    border-radius: 30%;
+}
+.section-team__link:hover{
+    color:  #EE5A24;
+    background: white;
+}
+
+@media only screen and (max-width: 1400px) {
+    .section-team__child{
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section-team__child{
+        flex-basis: 100%;
+    }
+}
+
+/* end of section team */
+
+/* section signin */
+
+.section-sign {
     background-color: #F79F1F;
     display:flex;
     flex-direction: column;
     align-items: center;
 }
-.section__sign__mail{
+.section-sign__h1{
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+.section-sign__mail{
     margin-top: 10px;
     font-size: 15px;
     width: 300px;
@@ -298,14 +291,21 @@ body{
     border-width: 2px;
     padding: 20px;
 }
-
+.section-sign__form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+}
 .button{
+    margin-top: 20px;
     background-color: white;
     font-size: 220%;
     width: 300px;
     height: 40px;
     margin-bottom: 20px;
 }
+
+/* end of section signin */
 
 /* section thanks for index2.html */
 
@@ -314,7 +314,6 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 10%;
-    
 }
 .section__thanks-div{
     display: flex;
