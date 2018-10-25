@@ -26,14 +26,14 @@
         </ul>
     </nav>
 
-    <section id="hero" class="section section__hero">
-        <div class="section__hero__h1">
+    <section id="hero" class="section section-hero">
+        <div class="section-hero__h1">
             <h1><b>Zacznij z&nbsp;nami <br>zdrowo jeść!</b></h1>
         </div>
-        <div class="section__hero__p">
+        <div class="section-hero__p">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Deleniti, qui, consequatur, consequuntur veniam. </p>
             <form  action="#sign">
-                <button class="section__hero__button__sign"> Zapisz się!</button>
+                <button class="section-hero__button-sign"> Zapisz się!</button>
             </form>
         </div>
     </section>
@@ -104,7 +104,6 @@
                     <div class="section-more__col section-more__col--img section-more__col--img-3">
                     </div>
                 </div>
-    
                 <div class="section-more__row section-more__row--reversed">
                     <div class="section-more__col section-more__col--text">
                         <h3 class="section-more__header">Feature 4</h3>
@@ -131,7 +130,6 @@
                         <div class="section-more__col section-more__col--img section-more__col--img-5">
                         </div>
                     </div>
-        
                     <div class="section-more__row section-more__row--reversed">
                         <div class="section-more__col section-more__col--text">
                             <h3 class="section-more__header">Feature 6</h3>
@@ -176,7 +174,6 @@
                     <p class='section-team__text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis optio quas veniam ipsam enim iure.</p>
                     <a class ='section-team__link' target='_blank' href='https://github.com/krkaminski'>Check out my profile!</a>
                     <a class='section-team__link' target='_blank' href='https://krkaminski.github.io/my-page/'>Visit my site!</a>
-
             </div>
             <div class='section-team__child '>
                     <img  class='section-team__img' src='https://avatars2.githubusercontent.com/u/43744107?s=460&v=4'>
@@ -187,26 +184,25 @@
             </div>
         </div>
 
-    <section id="sign" class="section section__sign">
+        <section id="sign" class="section section-sign">
+            <h1 class="section-sign__h1">Zapisz się na Premierę aplikacji!</h1>
+            <form action="https://emaillabs-sender.herokuapp.com/" method="POST" class="section-sign__form">
+                <input type="text" name="emails[]" class="section-sign__mail" placeholder="Wpisz swój e-mail">
+                <input type="hidden" name="subject" value="Premiera aplikacji Twoja Kaloria">
+                <input type="hidden" name="message" value="Witamy serdecznie. Premiera naszej aplikacji odbędzie się dnia: 17.12.2018 w Inkubatorze Przedsiębiorczości w Lublinie na ul.XXXXX. 
+                Informujemy iż powyższy mail został wysłany tylko 1 raz.">
+                <!-- <input type="hidden" name="from" value="mateusz.choma@infoshareacademy.com"> -->
+                <input type="hidden" name="from" value="krystianpietr@gmail.com">
+                <input type="hidden" name="fromName" value="Twoja Kaloria">
+                <input type="hidden" name="redirect" value="">
+                <input class="button" type="submit" value="Wyślij!">
+            </form>
+        </section>
 
-        <h1 class="section__sign__h1">Zapisz się na Premiere aplikacji!</h1>
-
-        <p class="section__sign__p">Aliquid aspernatur recusandae debitis animi voluptates repellat, <br/>dolorum distinctio nisi iste, voluptas beatae officiis, quam reprehenderit?</p>
-
-        <input type="text" name="mailtext"class="section__sign__mail"/>
-
-        <div class="section__sign__checkbox">
-            <label><input class="section__sign__checkbox__box" type="checkbox" name="checkmail" > Sprawdź maila!</label>
-        </div>
-
-        <button id="sign__button" class="section__sign__button"> Do Dzieła! </button>
-
-    </section>
 
     <section id="contact" class="section section-contact">
 
     </section>
 </body>
-
 
 </html>
