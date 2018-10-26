@@ -106,8 +106,15 @@ body{
     font-size: 30px;
 }
 .section-hero__button-sign{
-    padding:30px;
+    padding: 15px 80px;
     font-size: 20px;
+    background: #EE5A24;
+    color: white;
+    border: 6px dashed #F79F1F ; 
+    font-size: 26px;
+    border-radius: 30%;
+
+   
 }
 /* end of section hero */
 
@@ -390,16 +397,19 @@ body{
 .section-sign__h1{
     padding: 20px;
     font-size: 40px;
+    text-align: center;
+    margin-bottom: 0 ;
 }
 .section-sign__mail{
     margin-top: 10px;
     font-size: 15px;
-    width: 300px;
-    height: 40px;
+    width: 270px;
+    height: 20px;
     border-style: solid;
     border-color: #000;
     border-width: 2px;
     padding: 20px;
+    
 }
 .section-sign__form{
     display: flex;
@@ -409,11 +419,14 @@ body{
 }
 .button{
     margin-top: 20px;
-    background-color: white;
     font-size: 220%;
     width: 300px;
     height: 40px;
     margin-bottom: 20px;
+    background: #EE5A24;
+    border-radius: 30%;
+    color: white;
+    border: 3px dashed ;
 }
 /* end of section signin */
 
