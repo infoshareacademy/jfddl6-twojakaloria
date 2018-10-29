@@ -33,9 +33,7 @@
         </div>
         <div class="section-hero__p">
             <p class="section-hero__item-p">Nie czekaj!</br> Zacznij już dziś liczyć kalorie!</br> Pomożemy Ci w tym!  </p>
-            <form action="#sign">
-                <button class="section-hero__button-sign"> Zapisz się!</button>
-            </form>
+            <a class="section-hero__sign-link" href="#sign" > Zapisz się!</a>
         </div>
     </section>
     <section id="features" class="section section-features">
@@ -137,36 +135,48 @@
     <section id="team" class="section section-team ">
 
         <div class='section-team__container'>
-            <h2 class='section-team__title'>TEAM</h2>
+            <h2 class='section-team__title'>Nasz team!</h2>
             <div class='section-team__child '>
                 <img class='section-team__img' src='https://avatars0.githubusercontent.com/u/44070703?s=400&v=4'>
                 <h3 class='section-team__header'>Krystian Pietroń</h3>
                 <!-- <p class='section-team__text'></p> -->
-                <a class ='section-team__link' target='_blank' href='https://github.com/KrystianPietron'>Check out my profile!</a>
-                <a class='section-team__link' target='_blank' href='https://krystianpietron.github.io/homework/'>Visit my site!</a>
-
+                <div class= section-team__item>
+                    <a class='section-team__link' target='_blank' href='https://www.linkedin.com/in/krystian-pietroń-80784a164'><img class="section-team__link-img" src="img/linkedin.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://github.com/KrystianPietron'><img class="section-team__link-img" src="img/github.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://krystianpietron.github.io/homework/'><img class="section-team__link-img" src="img/js.png"></a>
+                    <a class ='section-team__link' target='_blank' href='https://www.facebook.com/krystian.pietron'><img class="section-team__link-img" src="img/logofacebok.jpg"></a></a>
+                </div>
             </div>
 
             <div class='section-team__child '>
                 <img class='section-team__img' src='https://avatars2.githubusercontent.com/u/43744107?s=460&v=4'>
                 <h3 class='section-team__header'>Dawid Kurkiewicz</h3>
                 <!-- <p class='section-team__text'></p> -->
-                <a class ='section-team__link' target='_blank' href='https://github.com/DawidKurkiewicz'>Check out my profile!</a>
-                <a class='section-team__link' target='_blank' href='https://dawidkurkiewicz.github.io/Mysite/'>Visit my site!</a>
+                <div class= section-team__item>
+                    <a class='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/linkedin.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://github.com/DawidKurkiewicz'><img class="section-team__link-img" src="img/github.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://dawidkurkiewicz.github.io/Mysite/'><img class="section-team__link-img" src="img/icondaw.png"></a>
+                    <a class ='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/logofacebok.jpg"></a></a>
+                </div>
             </div>
 
             <div class='section-team__child '>
                 <img class='section-team__img' src='https://avatars3.githubusercontent.com/u/33750272?s=400&v=4'>
                 <h3 class='section-team__header'>Krystian Kamiński</h3>
                 <!-- <p class='section-team__text'></p> -->
-                <a class ='section-team__link' target='_blank' href='https://github.com/krkaminski'>Check out my profile!</a>
-                <a class='section-team__link' target='_blank' href='https://krkaminski.github.io/my-page/'>Visit my site!</a>
+                <div class= section-team__item>
+                    <a class='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/linkedin.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://github.com/krkaminski'><img class="section-team__link-img" src="img/github.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://krkaminski.github.io/my-page/'><img class="section-team__link-img" src="img/js.png"></a>
+                    <a class ='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/logofacebok.jpg"></a></a>
+                </div>
             </div>
 
         </div>
 
         <section id="sign" class="section section-sign">
-            <h1 class="section-sign__h1">Zapisz się na Premierę aplikacji!</h1>
+            <h1 class="section-sign__h1">Zapisz się na Premierę aplikacji Twoja Kaloria!</h1>
+            <h2 class="section-sign__h2">Nie martw się spamem. Maila wysyłamy do Ciebie tylko raz!</h2>
             <form action="https://emaillabs-sender.herokuapp.com/" method="POST" class="section-sign__form">
                 <input type="text" name="emails[]" class="section-sign__mail" placeholder="Wpisz swój e-mail">
                 <input type="hidden" name="subject" value="Premiera aplikacji Twoja Kaloria">

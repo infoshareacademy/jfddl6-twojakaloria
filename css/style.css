@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-family:  "Roboto Condensed", sans-serif ;
+  font-weight: normal;
 }
 
 /* section nav */
@@ -143,7 +145,6 @@ body {
 .section-hero__h1 {
   text-transform: uppercase;
   margin-top: 30vh;
-  font-family: "Courier New", Courier, monospace;
   text-align: center;
   color: black;
   font-size: 50px;
@@ -160,21 +161,34 @@ body {
 .section-hero__item-p {
   text-align: center;
   margin-top: 5%;
-  font-family: "Courier New", Courier, monospace;
   color: black;
   font-size: 30px;
 }
 
-.section-hero__button-sign {
-  padding: 15px 80px;
+.section-hero__sign-link {
+  padding: 15px 60px;
   font-size: 20px;
-  background: #ee5a24;
-  color: white;
-  border: 6px dashed #f79f1f;
-  font-size: 26px;
-  border-radius: 30%;
+  background: #f7a11f75;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  transition: all 0.3s;
 }
-
+.section-hero__sign-link:hover {
+  transform: scale(1.2);
+}
+@media only screen and (max-width: 380px) {
+  .section-hero__h1{
+    font-size: 30px;
+  }
+  .section-hero__item-p{
+    font-size: 15px;
+  }
+  .section-hero__sign-link{
+    padding: 5px 30px;
+    font-size: 15px;
+  }
+}
 /* end of section hero */
 
 /* section feautures */
@@ -276,7 +290,6 @@ body {
   align-items: center;
   border-radius: 50%;
   border: 1px solid black;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 15vh;
   height: 15vh;
   background-color: red;
@@ -354,10 +367,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #ea2027;
-  border: 1px solid black;
+  background:#f79f1f;
   font-family: arial;
-  color: white;
+  color: black;
 }
 
 .section-team__child {
@@ -373,7 +385,6 @@ body {
 
 .section-team__header {
   font-size: 1.5em;
-  text-shadow: 5px 5px 10px black;
 }
 
 /* .section-team__text {
@@ -397,7 +408,7 @@ body {
   max-width: 150px;
   max-height: 150px;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 2px solid rgb(105, 105, 105);
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -405,24 +416,24 @@ body {
   background-color: slategray;
   overflow: hidden;
 }
-
+.section-team__item{
+  display: flex;
+}
 .section-team__link {
   text-align: center;
-  font-size: 20px;
-  text-decoration: none;
-  border: 3px dashed #f79f1f;
-  color: white;
-  background: #ee5a24;
-  transition: all 1s;
   display: block;
-  padding: 4px 20px;
   margin-top: 4px;
-  border-radius: 30%;
 }
-
+.section-team__link-img{
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .section-team__link:hover {
-  color: #ee5a24;
-  background: white;
+  transform: scale(1.4);
 }
 
 @media only screen and (max-width: 1400px) {
@@ -450,12 +461,12 @@ body {
 .section-sign__mail {
   margin-top: 10px;
   font-size: 15px;
-  width: 270px;
+  width: 250px;
   height: 20px;
   border-style: solid;
   border-color: #000;
   border-width: 2px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .section-sign__form {
@@ -464,17 +475,33 @@ body {
   align-items: center;
   padding: 20px;
 }
-
+.section-sign__h1{
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  font-size: 50px;
+}
+.section-sign__h2{
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  font-size: 30px;
+}
 .button {
-  margin-top: 20px;
-  font-size: 180%;
-  width: 300px;
-  height: 40px;
-  margin-bottom: 20px;
-  background: #ee5a24;
-  border-radius: 30%;
-  color: white;
-  border: 3px dashed;
+  margin-top:20px;
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5rem 0.75rem;
+  background-color: #ff7d31;
+  background-clip: padding-box;
+  font-size: 20px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.25rem;
+  color:black;
+  line-height: 1.25;
+}
+.button:hover {
+  transform: scale(1.2);
 }
 
 /* end of section signin */
