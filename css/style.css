@@ -327,20 +327,6 @@ body {
   background-position: center;
 }
 
-.section-more__col--img-5 {
-  background: url("../img/img11.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.section-more__col--img-6 {
-  background: url("../img/img12.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 @media (max-width: 768px) {
   .section-more__col {
     flex-basis: 100%;
