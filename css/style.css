@@ -10,7 +10,7 @@ body {
   justify-content: center;
   background-color: #ee5a24;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: -500px;
   transition: all 0.3s;
   box-shadow: 3px 0 15px #000;
@@ -322,20 +322,6 @@ body {
 
 .section-more__col--img-4 {
   background: url("../img/img10.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.section-more__col--img-5 {
-  background: url("../img/img11.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.section-more__col--img-6 {
-  background: url("../img/img12.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
