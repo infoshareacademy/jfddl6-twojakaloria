@@ -138,19 +138,74 @@ body {
   background-image: url("../img/img.jpg");
   background-size: cover;
   display: flex;
+  height: 1000px;
   flex-direction: column;
   align-items: center;
 }
-
-.section-hero__h1 {
+.section-hero1__h1 {
   text-transform: uppercase;
   margin-top: 30vh;
   text-align: center;
   color: black;
   font-size: 50px;
 }
-
-.section-hero__p {
+.section-hero1__p {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-hero1__item-p {
+  text-align: center;
+  margin-top: 5%;
+  color: black;
+  font-size: 30px;
+}
+.section-hero2 {
+  background-image: url("../img/tlo1.jpeg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1000px;
+}
+.section-hero2__h1 {
+  align-content: flex-end;
+  margin-top: 30vh;
+  text-align: center;
+  color: black;
+  font-size: 50px;
+}
+.section-hero2__p {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-hero2__item-p {
+  text-align: center;
+  margin-top: 5%;
+  color: black;
+  font-size: 30px;
+}
+.section-hero3 {
+  background-image: url("../img/tlo2.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1000px;
+}
+.section-hero3__h1 {
+  text-transform: uppercase;
+  margin-top: 30vh;
+  text-align: center;
+  color: black;
+  font-size: 50px;
+}
+.section-hero3__p {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -158,7 +213,7 @@ body {
   align-items: center;
 }
 
-.section-hero__item-p {
+.section-hero3__item-p {
   text-align: center;
   margin-top: 5%;
   color: black;
@@ -194,18 +249,15 @@ body {
 /* section feautures */
 .section-features {
   background-color: #f79f1f;
-  font-family: sans-serif;
 }
 
 .section-features__title {
   color: #eee;
-  text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
   padding: 20px;
   font-size: 35px;
   margin: 0;
-  text-shadow: 5px 5px 15px #000;
 }
 
 .section-features__container {
