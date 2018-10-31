@@ -505,3 +505,54 @@ body {
 }
 
 /* end of section signin */
+
+/* Section price */
+
+/* .section-price {
+  height: 20vh;
+} */
+
+.section-price__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: blue;
+  height: 300px;
+}
+
+.section-price__range-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
+}
+
+.section-price__range {
+  display: block;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.section-price__value-box,
+.section-price__checkbox-box {
+  color: #eee;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+}
+
+.section-price__label {
+  display: block;
+  width: 100%;
+  color: #eee;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+
+.section-price__label--sub {
+  font-size: 15px;
+  color: #eee;
+  text-transform: uppercase;
+}
