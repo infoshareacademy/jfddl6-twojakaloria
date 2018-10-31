@@ -505,3 +505,31 @@ body {
 }
 
 /* end of section signin */
+
+/* section cookies */
+.section-cookies {
+  position: fixed;
+  font-size: 12px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: #ff7d31;
+  text-align: center;
+  opacity: 0.8;
+}
+.section-cookies__header{
+  font-size: 20px;
+}
+.section-cookies__text{
+  font-size: 15px;
+}
+.section-cookies__button {
+  background-color: #ee5a24;
+  height: 30px;
+  width: 100px;
+  border: 1px solid;
+}
+.cookies__hidden {
+  display: none;
+}
+/* end of section cookies */
