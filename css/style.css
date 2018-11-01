@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family:  "Roboto Condensed", sans-serif ;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: normal;
 }
 
@@ -174,21 +174,26 @@ body {
   font-size: 30px;
   transition: all 0.3s;
 }
+
 .section-hero__sign-link:hover {
   transform: scale(1.2);
 }
+
 @media only screen and (max-width: 380px) {
-  .section-hero__h1{
+  .section-hero__h1 {
     font-size: 30px;
   }
-  .section-hero__item-p{
+
+  .section-hero__item-p {
     font-size: 15px;
   }
-  .section-hero__sign-link{
+
+  .section-hero__sign-link {
     padding: 5px 30px;
     font-size: 15px;
   }
 }
+
 /* end of section hero */
 
 /* section feautures */
@@ -367,7 +372,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background:#f79f1f;
+  background: #f79f1f;
   font-family: arial;
   color: black;
 }
@@ -416,15 +421,18 @@ body {
   background-color: slategray;
   overflow: hidden;
 }
-.section-team__item{
+
+.section-team__item {
   display: flex;
 }
+
 .section-team__link {
   text-align: center;
   display: block;
   margin-top: 4px;
 }
-.section-team__link-img{
+
+.section-team__link-img {
   width: 60px;
   height: 60px;
   padding: 5px;
@@ -432,6 +440,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .section-team__link:hover {
   transform: scale(1.4);
 }
@@ -475,61 +484,144 @@ body {
   align-items: center;
   padding: 20px;
 }
-.section-sign__h1{
+
+.section-sign__h1 {
   margin: 0 auto;
   padding: 15px;
   text-align: center;
   font-size: 50px;
 }
-.section-sign__h2{
+
+.section-sign__h2 {
   margin: 0 auto;
   padding: 15px;
   text-align: center;
   font-size: 30px;
 }
+
 .button {
-  margin-top:20px;
+  margin-top: 20px;
   width: 100%;
   max-width: 200px;
   padding: 0.5rem 0.75rem;
   background-color: #ff7d31;
   background-clip: padding-box;
   font-size: 20px;
-  border: 1px solid rgba(0,0,0,.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
-  color:black;
+  color: black;
   line-height: 1.25;
 }
+
 .button:hover {
   transform: scale(1.2);
 }
 
 /* end of section signin */
 
-/* section cookies */
-.section-cookies {
-  position: fixed;
-  font-size: 12px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  background-color: #ff7d31;
+/* Section price */
+
+/* .section-price {
+  height: 20vh;
+} */
+
+.section-price__container {
+  padding: 0 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ea2027;
+}
+
+.section-price__title {
+  letter-spacing: 3px;
   text-align: center;
-  opacity: 0.8;
+  text-transform: uppercase;
+  color: #eee;
+  font-size: 35px;
 }
-.section-cookies__header{
-  font-size: 20px;
+
+.section-price__range-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
 }
-.section-cookies__text{
-  font-size: 15px;
+
+.section-price__range {
+  display: block;
+  min-width: 300px;
+  margin: 0 auto;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ff7d31;
 }
-.section-cookies__button {
-  background-color: #ee5a24;
+
+.section-price__range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 25px;
+  cursor: pointer;
+  background: #ff7d31;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.section-price__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -2px;
   height: 30px;
-  width: 100px;
-  border: 1px solid;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.9);
 }
-.cookies__hidden {
-  display: none;
+
+.section-price__value-box,
+.section-price__checkbox-box {
+  color: #eee;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
 }
-/* end of section cookies */
+
+.section-price__checkbox-box {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.section-price__label {
+  display: block;
+  width: 100%;
+  color: #eee;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.section-price__label--checkbox {
+  margin: 30px auto 0;
+  padding: 20px 0;
+  display: block;
+  width: 100%;
+  color: #eee;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.section-price__label--sub {
+  font-size: 15px;
+  color: #eee;
+  text-transform: uppercase;
+}
+
+.section-price__checkbox--free {
+  text-align: center;
+}
