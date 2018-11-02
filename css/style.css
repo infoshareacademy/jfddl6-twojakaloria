@@ -22,6 +22,10 @@ body {
   top: 0;
 }
 
+.nav__link--active {
+  color: black;
+}
+
 .button-box {
   cursor: pointer;
   position: fixed;
@@ -64,7 +68,7 @@ body {
 
 /*
  IN PROGRESS
- 
+
 .button-box--close:before {
   content: '';
   display: block;
@@ -129,6 +133,11 @@ body {
   padding: 20px;
   text-transform: uppercase;
 }
+
+.nav__item--active {
+  background-color: #f79f1f;
+}
+
 
 @media only screen and (min-width: 1025px) {
   .nav {

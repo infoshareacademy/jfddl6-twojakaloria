@@ -3,6 +3,10 @@
 const menu = document.querySelector('.nav');
 const menuButton = document.querySelector('.button-box');
 const menuItems = document.querySelectorAll('.nav__item')
+const hero = document.querySelector('#hero')
+const features = document.querySelector('#features')
+const more = document.querySelector('#more')
+const sign = document.querySelector('#sign')
 
 menuButton.addEventListener('click', () => {
     menu.classList.toggle('nav--active');
@@ -13,6 +17,23 @@ menuItems.forEach( element => {
         menu.classList.remove('nav--active')
     })
 } )
+
+// Work in progtress
+
+window.onscroll = function toggleClass() {
+    let scrollPositionY = window.pageYOffset
+
+    if (scrollPositionY > features.offsetHeight) {
+       console.log('jupi')
+       menuItems[1].className = 'nav__item nav__item--active'
+       menuItems[0].className = 'nav__item'
+    }
+
+    if (scrollPositionY >  more.top) {
+        menuItems[2].className = 'nav__item nav__item--active'
+    }
+}
+
 
 // Cookies
 
