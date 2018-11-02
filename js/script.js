@@ -2,10 +2,17 @@
 
 const menu = document.querySelector('.nav');
 const menuButton = document.querySelector('.button-box');
+const menuItems = document.querySelectorAll('.nav__item')
 
 menuButton.addEventListener('click', () => {
     menu.classList.toggle('nav--active');
 })
+
+menuItems.forEach( element => {
+    element.addEventListener('click', () => {
+        menu.classList.remove('nav--active')
+    })
+} )
 
 // Cookies
 
