@@ -1,6 +1,9 @@
 
 /* section thanks for index2.html */
-.section__thanks{
+body{
+    margin: 0;
+}
+.section-thanks{
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -9,23 +12,25 @@
     background-size: cover;
     height: 100vh;
 }
-.section__thanks-div{
+.section-thanks__container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
 }
-.section__thanks-div h1{
+.section-thanks__container h1{
     padding:20px;
     font-size: 80px;
     text-align: center;
 }
-.section__thanks-div h2{
+.section-thanks__container h2{
     padding: 20px;
-    font-size: 60px;
+    font-size: 40px;
+    text-align: center;
+    max-width: 1600px;
 }
-.section__thanks-button{
+.section-thanks__button{
     padding: 15px 60px;
     font-size: 20px;
     background: #f7a11f75;
@@ -35,7 +40,69 @@
     transition: all 0.3s;
     text-align: center;
 }
-.section__thanks-button:hover{
+.section-thanks__button:hover{
     transform: scale(1.2);
 }
+
+
+.nav--active{
+display:none ;
+}
+.button-box {
+    cursor: pointer;
+    position: fixed;
+    top: 40px;
+    right: 30px;
+    height: 40px;
+    width: 40px;
+  }
+  
+  .button-box__button {
+    width: 40px;
+    height: 4px;
+    background-color: #eee;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+  
+  .button-box__button:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 4px;
+    background-color: #eee;
+  }
+  
+  .button-box__button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 4px;
+    background-color: #eee;
+  }
+  .section-menu__list{
+    display: flex;
+    list-style: none;
+    padding: 0 ;
+    margin: 0 ;
+    flex-direction: column;
+
+}
+.section-menu__list--item{
+background:#383838;
+text-align: center;
+display: block;
+padding: 10px;
+color: white;
+font-size: 25px;
+text-decoration: none;
+}
+
+ 
 /* end of section for index2.html */
