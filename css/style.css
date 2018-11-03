@@ -137,14 +137,12 @@ body {
 /* end of section nav */
 
 /* section hero */
-.section{
-  display: flex;
-}
 .section-hero {
   background-image: url("../img/img.jpg");
 }
 .section__buttons-img{
   display: flex;
+  flex-direction: row;
   height: 100%;
   width: 100em;
 }
@@ -153,13 +151,14 @@ body {
   height: 100px;
 }
 .section-buttonleft{
-  flex-direction: column;
-  align-content: flex-start;
+  justify-items: center;
+  align-items: flex-start;
   z-index: 3;
 }
 .section-buttonright{
-  flex-direction: column;
-  align-content: flex-end;
+  display: flex;
+  justify-items: center;
+  align-items: flex-end;
   z-index: 3;
 }
 #hero {
