@@ -1,38 +1,48 @@
-// Toggling menu
+//  menu
 
 const menu = document.querySelector('.nav');
 const menuButton = document.querySelector('.button-box');
 const menuItems = document.querySelectorAll('.nav__item')
+
 const hero = document.querySelector('#hero')
 const features = document.querySelector('#features')
 const more = document.querySelector('#more')
+const team = document.querySelector('#team')
 const sign = document.querySelector('#sign')
 
 menuButton.addEventListener('click', () => {
     menu.classList.toggle('nav--active');
 })
 
-menuItems.forEach( element => {
+menuItems.forEach(element => {
     element.addEventListener('click', () => {
         menu.classList.remove('nav--active')
     })
-} )
+})
 
-// Work in progtress
+const highlightMenu = () => {
+    const section = document.querySelectorAll('.section')
+    const sections = {}
+    let i = 0
 
-window.onscroll = function toggleClass() {
-    let scrollPositionY = window.pageYOffset
+    Array.prototype.forEach.call(section, (e) => {
+        sections[e.id] = e.offsetTop
+    })
 
-    if (scrollPositionY > features.offsetHeight) {
-       console.log('jupi')
-       menuItems[1].className = 'nav__item nav__item--active'
-       menuItems[0].className = 'nav__item'
-    }
+    window.onscroll = () => {
+        let scrollPosition = window.scrollY + menu.clientHeight
 
-    if (scrollPositionY >  more.top) {
-        menuItems[2].className = 'nav__item nav__item--active'
+        for (i in sections) {
+            if (sections[i] <= scrollPosition) {
+                document.querySelector('.nav__link--active').setAttribute('class', 'nav__link')
+                document.querySelector('a[href*=' + i + ']').setAttribute('class', 'nav__link nav__link--active')
+            }
+        }
     }
 }
+
+window.addEventListener('scroll', highlightMenu)
+
 
 
 // Cookies
