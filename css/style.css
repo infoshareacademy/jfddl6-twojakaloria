@@ -137,9 +137,30 @@ body {
 /* end of section nav */
 
 /* section hero */
+.section{
+  display: flex;
+}
 .section-hero {
   background-image: url("../img/img.jpg");
+}
+.section__buttons-img{
   display: flex;
+  height: 100%;
+  width: 100em;
+}
+.section__buttons-img img{
+  width: 100px;
+  height: 100px;
+}
+.section-buttonleft{
+  flex-direction: column;
+  align-content: flex-start;
+  z-index: 3;
+}
+.section-buttonright{
+  flex-direction: column;
+  align-content: flex-end;
+  z-index: 3;
 }
 #hero {
   height: 1000px;
@@ -152,11 +173,10 @@ body {
   align-items: center;
   overflow: hidden;
   position: absolute;
-  z-index: 0;
 }
 .section #item {
   background-size: cover;
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 0;
   left: 0;
@@ -164,10 +184,12 @@ body {
   margin: 0 auto;
   opacity: 0;
   transition: opacity 3s;
+  z-index: 0;
 }
 .section #item.current {
   opacity: 1;
   display: block;
+  z-index: 1;
 }
 .section #item.current:hover{
   transition: 0,5s;
@@ -250,7 +272,7 @@ body {
   color: black;
   font-size: 30px;
   transition: all 0.3s;
-  z-index: 0;
+  z-index: 2;
 }
 .section-hero__sign-link:hover {
   transform: scale(1.2);

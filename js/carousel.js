@@ -1,18 +1,13 @@
 (function() {
-  var container = document.querySelector("#hero");
-  var hero = container.querySelectorAll("#item");
+let container = document.querySelector("#hero");
+let hero = container.querySelectorAll("#item");
+document.getElementById("hero").addEventListener("mouseenter", mouseEnter);
+document.getElementById("hero").addEventListener("mouseleave", mouseLeave);
   function change() {
-    document.getElementById("hero").onmouseenter = function() {
-      mouseEnter();
-    };
-    document.getElementById("hero").onmouseleave = function() {
-      mouseLeave();
-    };
-    var current = container.querySelector(`#item.current`);
-    var next = container.querySelector(`#item.current + #item`) || hero[0];
+    let current = container.querySelector(`#item.current`);
+    let next = container.querySelector(`#item.current + #item`) || hero[0];
     if (current) {
       current.classList.remove("current");
-
     }
     if (next) {
       next.classList.add("current");
