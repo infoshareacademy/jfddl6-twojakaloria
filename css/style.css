@@ -74,6 +74,8 @@ body {
 }
 
 .nav__links {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -101,6 +103,10 @@ body {
   text-transform: uppercase;
 }
 
+.nav__link--active {
+  color: black;
+}
+
 @media only screen and (min-width: 1025px) {
   .nav {
     flex-direction: row;
@@ -111,9 +117,7 @@ body {
   }
 
   .nav__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
   }
 
   .button-box__button {
