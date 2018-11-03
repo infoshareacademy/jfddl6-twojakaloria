@@ -156,7 +156,7 @@ body {
 }
 .section #item {
   background-size: cover;
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -167,6 +167,10 @@ body {
 }
 .section #item.current {
   opacity: 1;
+  display: block;
+}
+.section #item.current:hover{
+  transition: 0,5s;
 }
 
 .section-hero1__h1 {
@@ -246,6 +250,7 @@ body {
   color: black;
   font-size: 30px;
   transition: all 0.3s;
+  z-index: 0;
 }
 .section-hero__sign-link:hover {
   transform: scale(1.2);
