@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const menu = document.querySelector(".nav");
 const menuButton = document.querySelector(".button-box");
 
@@ -6,6 +7,8 @@ menuButton.addEventListener("click", () => {
   menu.classList.toggle("nav--active");
 });
 =======
+=======
+>>>>>>> develop
 //  menu
 
 const menu = document.querySelector('.nav');
@@ -95,5 +98,9 @@ checkboxFree.addEventListener('change', () => {
     if (checkboxFree.checked) {
         price.textContent = range.value * 0 + '$';
     }
+<<<<<<< HEAD
+})
+>>>>>>> develop
+=======
 })
 >>>>>>> develop

@@ -18,7 +18,7 @@
             <img src="/img/salad.png" alt="LOGO" class="nav__img">
         </div>
         <ul class="nav__links">
-            <li class="nav__item"><a class="nav__link" href="#hero">Home</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--active" href="#hero">Home</a></li>
             <li class="nav__item"><a class="nav__link" href="#features">Features</a></li>
             <li class="nav__item"><a class="nav__link" href="#more">More</a></li>
             <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
@@ -61,9 +61,7 @@
                     <h1><b>Uważaj<br>by nie przekroczyć limitu kalorii!</b></h1>
                 </div>
                 <div class="section-hero3__p">
-                    <p class="section-hero3__item-p">Aplikacja powiadomi Cię jeżeli ilość kalori bedzie<br> zbliżała
-                        się do
-                        dziennego limitu!</p>
+                    <p class="section-hero3__item-p">Aplikacja powiadomi Cię jeżeli ilość kalori bedzie<br> zbliżała się do dziennego limitu!</p>
                 </div>
             </div>
         </div>
@@ -90,7 +88,7 @@
             </div>
         </div>
     </section>
-    <section id="more" class="section-more">
+    <section id="more" class="section-more section">
         <div class="section-more__container">
             <div class="section-more__row">
                 <div class="section-more__col section-more__col--text">
@@ -164,6 +162,31 @@
         </div>
     </section>
 
+    <section id="price" class="section-price">
+        <div class="section-price__container">
+            <h3 class="section-price__title">We invite you to cooperation</h3>
+            <div class="section-price__range-box">
+                <label class="section-price__label" for="price">Price:
+                    <span class="section-price__price">0$</span>
+                </label>
+                <input id="price" class="section-price__range" type="range" min="0" max="10" step="1" default="5">
+                <div class="section-price__value-box" id="price-value">Persons:
+                    <span class="section-price__value">5</span></div>
+            </div>
+            <div class="section-price__checkbox-box">
+                <label class="section-price__label--checkbox" for="option">Option</label>
+                <div class="section-price__checkbox--free">
+                    <label for="free" class="section-price__label--sub">Free Version</label>
+                    <input id="free" type="radio" name="option" class="section-price__check--free" value="Free" checked>
+                </div>
+                <div class="section-price__checkbox--premium">
+                    <label for="premium" class="section-price__label--sub">Premium Version</label>
+                    <input id="premium" type="radio" name="option" class="section-price__check--premium" value="Premium">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section id="team" class="section section-team ">
 
@@ -174,14 +197,10 @@
                 <h3 class='section-team__header'>Krystian Pietroń</h3>
                 <!-- <p class='section-team__text'></p> -->
                 <div class=section-team__item>
-                    <a class='section-team__link' target='_blank' href='https://www.linkedin.com/in/krystian-pietroń-80784a164'><img
-                            class="section-team__link-img" src="img/linkedin.png"></a>
-                    <a class='section-team__link' target='_blank' href='https://github.com/KrystianPietron'><img class="section-team__link-img"
-                            src="img/github.png"></a>
-                    <a class='section-team__link' target='_blank' href='https://krystianpietron.github.io/homework/'><img
-                            class="section-team__link-img" src="img/js.png"></a>
-                    <a class='section-team__link' target='_blank' href='https://www.facebook.com/krystian.pietron'><img
-                            class="section-team__link-img" src="img/logofacebok.jpg"></a></a>
+                    <a class='section-team__link' target='_blank' href='https://www.linkedin.com/in/krystian-pietroń-80784a164'><img class="section-team__link-img" src="img/linkedin.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://github.com/KrystianPietron'><img class="section-team__link-img" src="img/github-logo.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://krystianpietron.github.io/homework/'><img class="section-team__link-img" src="img/js.png"></a>
+                    <a class ='section-team__link' target='_blank' href='https://www.facebook.com/krystian.pietron'><img class="section-team__link-img" src="img/facebook.png"></a></a>
                 </div>
             </div>
 
@@ -191,11 +210,9 @@
                 <!-- <p class='section-team__text'></p> -->
                 <div class=section-team__item>
                     <a class='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/linkedin.png"></a>
-                    <a class='section-team__link' target='_blank' href='https://github.com/DawidKurkiewicz'><img class="section-team__link-img"
-                            src="img/github.png"></a>
-                    <a class='section-team__link' target='_blank' href='https://dawidkurkiewicz.github.io/Mysite/'><img
-                            class="section-team__link-img" src="img/icondaw.png"></a>
-                    <a class='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/logofacebok.jpg"></a></a>
+                    <a class='section-team__link' target='_blank' href='https://github.com/DawidKurkiewicz'><img class="section-team__link-img" src="img/github-logo.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://dawidkurkiewicz.github.io/Mysite/'><img class="section-team__link-img" src="img/favdawid.png"></a>
+                    <a class ='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/facebook.png"></a></a>
                 </div>
             </div>
 
@@ -205,11 +222,9 @@
                 <!-- <p class='section-team__text'></p> -->
                 <div class=section-team__item>
                     <a class='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/linkedin.png"></a>
-                    <a class='section-team__link' target='_blank' href='https://github.com/krkaminski'><img class="section-team__link-img"
-                            src="img/github.png"></a>
-                    <a class='section-team__link' target='_blank' href='https://krkaminski.github.io/my-page/'><img
-                            class="section-team__link-img" src="img/js.png"></a>
-                    <a class='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/logofacebok.jpg"></a></a>
+                    <a class='section-team__link' target='_blank' href='https://github.com/krkaminski'><img class="section-team__link-img" src="img/github-logo.png"></a>
+                    <a class='section-team__link' target='_blank' href='https://krkaminski.github.io/my-page/'><img class="section-team__link-img" src="img/js.png"></a>
+                    <a class ='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/facebook.png"></a></a>
                 </div>
             </div>
 
@@ -232,9 +247,16 @@
         </section>
 
 
-        <section id="contact" class="section section-contact">
+
+        <section id="cookies" class="section-cookies">
+            <h3 class="section-cookies__header">Ta strona używa plików Cookie</h3>
+            <p class="section-cookies__text">Zgodnie z polskim prawem mamy obowiązek informować o używaniu plików
+                Cookie</p>
+            <button id="cookies__button" class="section-cookies__button">Akceptuj</button>
 
         </section>
+
+
         <script src="js/script.js"></script>
 
 </body>
