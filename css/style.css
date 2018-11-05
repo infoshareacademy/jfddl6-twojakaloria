@@ -151,17 +151,14 @@ body {
 .divright{
   z-index: 3;
 }
-.divleft:hover{
-  transform: scale(1,2);
+
+.section__buttons-img img{
+  width: 50px;
+  height: 50px;
 }
-.divright:hover{
+.section__buttons-img img:hover{
   transform: scale(1,2)
 }
-.section__buttons-img img{
-  width: 100px;
-  height: 100px;
-}
-
 #hero {
   height: 1000px;
   position: sticky;
