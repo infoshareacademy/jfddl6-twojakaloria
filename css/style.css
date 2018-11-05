@@ -142,30 +142,33 @@ body {
 }
 .section__buttons-img{
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
-  width: 100em;
+  width: 100%;
+}
+.divleft{
+  z-index: 3;
+}
+.divright{
+  z-index: 3;
+}
+.divleft:hover{
+  transform: scale(1,2);
+}
+.divright:hover{
+  transform: scale(1,2)
 }
 .section__buttons-img img{
   width: 100px;
   height: 100px;
 }
-.section-buttonleft{
-  justify-items: center;
-  align-items: flex-start;
-  z-index: 3;
-}
-.section-buttonright{
-  display: flex;
-  justify-items: center;
-  align-items: flex-end;
-  z-index: 3;
-}
+
 #hero {
   height: 1000px;
   position: sticky;
 }
-#item {
+.items {
   width: 100%;
   height: 1000px;
   flex-direction: column;
@@ -173,9 +176,8 @@ body {
   overflow: hidden;
   position: absolute;
 }
-.section #item {
+.section .items {
   background-size: cover;
-  /* display: none; */
   position: absolute;
   top: 0;
   left: 0;
@@ -185,15 +187,11 @@ body {
   transition: opacity 3s;
   z-index: 0;
 }
-.section #item.current {
+.section .items.current {
   opacity: 1;
   display: block;
   z-index: 1;
 }
-.section #item.current:hover{
-  transition: 0,5s;
-}
-
 .section-hero1__h1 {
   text-transform: uppercase;
   margin-top: 30vh;

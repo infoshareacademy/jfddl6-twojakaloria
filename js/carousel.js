@@ -1,11 +1,33 @@
 (function() {
-let container = document.querySelector("#hero");
-let hero = container.querySelectorAll("#item");
-document.getElementById("hero").addEventListener("mouseenter", mouseEnter);
-document.getElementById("hero").addEventListener("mouseleave", mouseLeave);
+  let container = document.querySelector(".carouselle");
+  let carouselle = container.querySelectorAll(".items");
+  document.querySelector(".section__hero").addEventListener("mouseenter", mouseEnter);
+  document.querySelector(".section__hero").addEventListener("mouseleave", mouseLeave);
+  document.querySelector(".divleft").addEventListener("click", changeLeft);
+  document.querySelector(".divright").addEventListener("click", changeRight);
   function change() {
-    let current = container.querySelector(`#item.current`);
-    let next = container.querySelector(`#item.current + #item`) || hero[0];
+    let current = container.querySelector(`.items.current`);
+    let next = container.querySelector(`.items.current + .items`) || carouselle[0];
+    if (current) {
+      current.classList.remove("current");
+    }
+    if (next) {
+      next.classList.add("current");
+    }
+  }
+  function changeLeft() {
+    let current = container.querySelector(`.items.current`);
+    let next = container.querySelector(`.items.current`).previousElementSibling || carouselle[2];
+    if (current) {
+      current.classList.remove("current");
+    }
+    if (next) {
+      next.classList.add("current");
+    }
+  }
+  function changeRight() {
+    let current = container.querySelector(`.items.current`);
+    let next = container.querySelector(`.items.current`).nextElementSibling || carouselle[0];
     if (current) {
       current.classList.remove("current");
     }
