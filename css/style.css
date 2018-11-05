@@ -16,7 +16,7 @@ body {
   top: -500px;
   transition: all 0.3s;
   box-shadow: 3px 0 15px #000;
-  z-index: 5
+  z-index: 5;
 }
 
 .nav--active {
@@ -30,6 +30,7 @@ body {
   right: 30px;
   height: 40px;
   width: 40px;
+  z-index: 6;
 }
 
 .button-box__button {
@@ -374,7 +375,6 @@ body {
 
 /* section team */
 .section-team__container {
-  padding: 100px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -393,7 +393,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(600px);
+  transform: translateY(800px);
   transition: all 1s;
   overflow: hidden;
 }
@@ -435,7 +435,6 @@ body {
   background-color: slategray;
   overflow: hidden;
 }
-
 
 .section-team__item {
   display: flex;
@@ -654,7 +653,7 @@ body {
     font-size: 25px;
   }
 
-  .section-price__range{
+  .section-price__range {
     min-width: 200px;
     width: 60%;
   }

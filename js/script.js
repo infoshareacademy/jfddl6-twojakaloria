@@ -18,14 +18,14 @@ Start of Animated images
 
 window.addEventListener('scroll', () => {
     let scrollPosition = window.scrollY + menu.clientHeight
-    if (team.offsetTop - priceSec.clientHeight <= scrollPosition) {
+    if (team.offsetTop - (priceSec.clientHeight / 2) <= scrollPosition) {
         teamImg.forEach(img => {
             img.classList.add('section-team__child--animated')
         })
-        console.log(scrollPosition)
-        console.log(team.offsetTop)
     }
 })
+
+/* End of animated images */
 
 
 menuButton.addEventListener('click', () => {
