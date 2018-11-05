@@ -28,7 +28,7 @@ body {
   right: 30px;
   height: 40px;
   width: 40px;
-  z-index: 6;
+  z-index: 10;
 }
 .button-box__button {
   width: 40px;
@@ -110,6 +110,10 @@ body {
     flex-direction: row;
   }
 
+  .button-box {
+    display: none;
+  }
+
   .button-box__button {
     display: none;
   }
@@ -129,26 +133,26 @@ body {
 
 /* section hero */
 
-.section__buttons-img{
+.section__buttons-img {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   width: 100%;
 }
-.section-hero__button-left{
+.section-hero__button-left {
   z-index: 3;
 }
-.section-hero__button-right{
+.section-hero__button-right {
   z-index: 3;
 }
 
-.section__buttons-img img{
+.section__buttons-img img {
   width: 50px;
   height: 50px;
 }
-.section__buttons-img img:hover{
-  transform: scale(1,2)
+.section__buttons-img img:hover {
+  transform: scale(1, 2);
 }
 .section__hero {
   height: 1000px;
@@ -195,7 +199,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.carouselle-item__p-item{
+.carouselle-item__p-item {
   text-align: center;
   margin-top: 5%;
   color: black;
@@ -207,7 +211,7 @@ body {
 .carouselle__item3 {
   background-image: url("../img/tlo2.jpg");
 }
-.carouselle-item__sign-link{
+.carouselle-item__sign-link {
   padding: 15px 60px;
   font-size: 20px;
   background: #f7a11f75;
