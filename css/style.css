@@ -18,11 +18,9 @@ body {
   box-shadow: 3px 0 15px #000;
   z-index:3;
 }
-
 .nav--active {
   top: 0;
 }
-
 .button-box {
   cursor: pointer;
   position: fixed;
@@ -32,7 +30,6 @@ body {
   width: 40px;
   z-index:4;
 }
-
 .button-box__button {
   width: 40px;
   height: 4px;
@@ -41,7 +38,6 @@ body {
   top: 50px;
   right: 30px;
 }
-
 .button-box__button:before {
   content: "";
   display: block;
@@ -51,7 +47,6 @@ body {
   height: 4px;
   background-color: #eee;
 }
-
 .button-box__button:after {
   content: "";
   display: block;
@@ -61,13 +56,11 @@ body {
   height: 4px;
   background-color: #eee;
 }
-
 .nav__logo {
   margin: 0 auto;
   padding: 20px;
   transition: 0.3s all;
 }
-
 .nav__img {
   max-width: 100px;
   display: block;
@@ -135,9 +128,7 @@ body {
 /* end of section nav */
 
 /* section hero */
-.section-hero {
-  background-image: url("../img/img.jpg");
-}
+
 .section__buttons-img{
   display: flex;
   justify-content: space-between;
@@ -145,10 +136,10 @@ body {
   height: 100%;
   width: 100%;
 }
-.divleft{
+.section-hero__button-left{
   z-index: 3;
 }
-.divright{
+.section-hero__button-right{
   z-index: 3;
 }
 
@@ -159,7 +150,7 @@ body {
 .section__buttons-img img:hover{
   transform: scale(1,2)
 }
-#hero {
+.section__hero {
   height: 1000px;
   position: sticky;
 }
@@ -187,76 +178,36 @@ body {
   display: block;
   z-index: 1;
 }
-.section-hero1__h1 {
+.carouselle__item1 {
+  background-image: url("../img/img.jpg");
+}
+.carouselle-item__h2 {
   text-transform: uppercase;
   margin-top: 30vh;
   text-align: center;
   color: black;
   font-size: 50px;
 }
-.section-hero1__p {
+.carouselle-item__p {
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.section-hero1__item-p {
+.carouselle-item__p-item{
   text-align: center;
   margin-top: 5%;
   color: black;
   font-size: 30px;
 }
-.section-hero2 {
+.carouselle__item2 {
   background-image: url("../img/tlo1.jpeg");
 }
-.section-hero2__h1 {
-  align-content: flex-end;
-  margin-top: 30vh;
-  text-align: center;
-  color: black;
-  font-size: 50px;
-}
-.section-hero2__p {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.section-hero2__item-p {
-  text-align: center;
-  margin-top: 5%;
-  color: black;
-  font-size: 30px;
-}
-.section-hero3 {
+.carouselle__item3 {
   background-image: url("../img/tlo2.jpg");
 }
-
-.section-hero3__h1 {
-  text-transform: uppercase;
-  margin-top: 30vh;
-  text-align: center;
-  color: black;
-  font-size: 50px;
-}
-.section-hero3__p {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-hero3__item-p {
-  text-align: center;
-  margin-top: 5%;
-  color: black;
-  font-size: 30px;
-}
-
-.section-hero__sign-link {
+.carouselle-item__sign-link{
   padding: 15px 60px;
   font-size: 20px;
   background: #f7a11f75;

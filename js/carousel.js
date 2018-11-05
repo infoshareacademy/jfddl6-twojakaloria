@@ -3,8 +3,8 @@
   let carouselle = container.querySelectorAll(".items");
   document.querySelector(".section__hero").addEventListener("mouseenter", mouseEnter);
   document.querySelector(".section__hero").addEventListener("mouseleave", mouseLeave);
-  document.querySelector(".divleft").addEventListener("click", changeLeft);
-  document.querySelector(".divright").addEventListener("click", changeRight);
+  document.querySelector(".section-hero__button-left").addEventListener("click", changeLeft);
+  document.querySelector(".section-hero__button-right").addEventListener("click", changeRight);
   function change() {
     let current = container.querySelector(`.items.current`);
     let next = container.querySelector(`.items.current + .items`) || carouselle[0];
