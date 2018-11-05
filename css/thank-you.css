@@ -1,9 +1,10 @@
-
 /* section thanks for index2.html */
-body{
+
+body {
     margin: 0;
 }
-.section-thanks{
+
+.section-thanks {
     margin: 0 auto;
     justify-content: center;
     background-image: url(../img/img.jpg);
@@ -11,24 +12,27 @@ body{
     background-size: cover;
     height: 100%;
 }
-.section-thanks__container{
+
+.section-thanks__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
-.section-thanks__container h1{
-    padding:20px;
+
+.section-thanks__container h1 {
     font-size: 80px;
     text-align: center;
 }
-.section-thanks__container h2{
-    padding: 20px;
+
+.section-thanks__container h2 {
     font-size: 40px;
     text-align: center;
-    max-width: 1600px;
+    max-width: 1000px;
 }
-.section-thanks__button{
+
+.section-thanks__button {
     padding: 15px 60px;
     font-size: 20px;
     background: #f7a11f75;
@@ -39,26 +43,50 @@ body{
     text-align: center;
     margin: 20px;
 }
-.section-thanks__button:hover{
+
+.section-thanks__button:hover {
     transform: scale(1.2);
 }
-.nav--active{
-display:none ;
+
+.instruction--active {
+    display: none;
 }
+
 .button-box {
     cursor: pointer;
-}
-.button-box__button {
-    font-size: 25px;
-    border: 2px solid;
-    padding: 5px;
-    margin: 10px;
-    background: #f7a11f75;
+    text-align: center;
     transition: all 0.3s;
+    margin-bottom: 40px;
 }
-.section-instruction__list--item{
-padding: 10px;
-color: black;
-font-size: 25px;
+
+.button-box__button {
+    padding: 15px 60px;
+    font-size: 20px;
+    background: #f7a11f75;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
 }
+
+.button-box:hover {
+    transform: scale(1.2);
+}
+
+.section-instruction__list--item {
+    padding: 10px;
+    color: black;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 430px) {
+    .section-thanks__container h1 {
+        font-size: 50px;
+    }
+    .section-thanks__container h2 {
+        font-size: 30px;
+    }
+}
+
 /* end of section for index2.html */
