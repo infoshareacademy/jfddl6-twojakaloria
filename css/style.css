@@ -16,6 +16,7 @@ body {
   top: -500px;
   transition: all 0.3s;
   box-shadow: 3px 0 15px #000;
+  z-index: 5;
 }
 
 .nav--active {
@@ -29,6 +30,7 @@ body {
   right: 30px;
   height: 40px;
   width: 40px;
+  z-index: 6;
 }
 
 .button-box__button {
@@ -373,6 +375,7 @@ body {
   background: #f79f1f;
   font-family: arial;
   color: black;
+  overflow: hidden;
 }
 
 .section-team__child {
@@ -384,6 +387,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateY(800px);
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.section-team__child--animated {
+  transform: translateY(0);
 }
 
 .section-team__header {
@@ -453,13 +463,21 @@ body {
   .section-team__child {
     flex-basis: 100%;
   }
+
+  .section-team__child {
+    transform: translateX(-500px) translateY(0);
+  }
+
+  .section-team__child--animated {
+    transform: translateX(0) translateY(0);
+  }
 }
 
 /* end of section team */
 
 /* section signin */
 .section-sign {
-  background-color: #f79f1f;
+  background-color: #ea2027;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -629,7 +647,7 @@ body {
     font-size: 25px;
   }
 
-  .section-price__range{
+  .section-price__range {
     min-width: 200px;
     width: 60%;
   }
