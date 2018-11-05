@@ -630,6 +630,17 @@ body {
   text-align: center;
 }
 
+@media (max-width: 500px) {
+  .section-price__title {
+    font-size: 25px;
+  }
+
+  .section-price__range{
+    min-width: 200px;
+    width: 60%;
+  }
+}
+
 .section-cookies {
   position: fixed;
   font-size: 12px;
