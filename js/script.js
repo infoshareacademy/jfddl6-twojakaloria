@@ -9,6 +9,24 @@ const features = document.querySelector('#features')
 const more = document.querySelector('#more')
 const team = document.querySelector('#team')
 const sign = document.querySelector('#sign')
+const priceSec = document.querySelector('.section-price')
+const teamImg = document.querySelectorAll('.section-team__child')
+
+/*
+Start of Animated images
+*/
+
+window.addEventListener('scroll', () => {
+    let scrollPosition = window.scrollY + menu.clientHeight
+    if (team.offsetTop - priceSec.clientHeight <= scrollPosition) {
+        teamImg.forEach(img => {
+            img.classList.add('section-team__child--animated')
+        })
+        console.log(scrollPosition)
+        console.log(team.offsetTop)
+    }
+})
+
 
 menuButton.addEventListener('click', () => {
     menu.classList.toggle('nav--active');
