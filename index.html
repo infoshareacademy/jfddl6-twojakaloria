@@ -27,15 +27,45 @@
     </nav>
     <div class="button-box"><span class="button-box__button"></span></div>
 
-    <section id="hero" class="section section-hero">
-        <div class="section-hero__h1">
-            <h1><b>Zacznij z&nbsp;nami <br>zdrowo jeść!</b></h1>
+    <section id="hero" class="section section__hero">
+        <div id="buttons" class="section__buttons-img">
+            <div id="left" class="section-hero__button-left">
+                <img src="img/canvasleft.png" class="section-hero__button-left-img" alt="button__prev">
+            </div>
+            <div id="right" class="section-hero__button-right">
+                <img src="img/canvasright.png" class="section-hero__button-left-img" alt="button__next">
+            </div>
         </div>
-        <div class="section-hero__p">
-            <p class="section-hero__item-p">Nie czekaj!</br> Zacznij już dziś liczyć kalorie!</br> Pomożemy Ci w tym!
-            </p>
-            <a class="section-hero__sign-link" href="#sign" > Zapisz się!</a>
+        <div class="carouselle">
+            <div class="items carouselle__item1">
+                <div class="carouselle-item__h2">
+                    <h2><b>Zacznij z&nbsp;nami <br>zdrowo jeść!</b></h2>
+                </div>
+                <div class="carouselle-item__p">
+                    <p class="carouselle-item__p-item">Nie czekaj!</br> Zacznij już dziś liczyć kalorie!</br> Pomożemy Ci
+                        w
+                        tym! </p>
+                    <a class="carouselle-item__sign-link" href="#sign"> Zapisz się!</a>
+                </div>
+            </div>
+            <div  class="items carouselle__item2">
+                <div class="carouselle-item__h2">
+                    <h2><b>Dodaj posiłki!</b></h2>
+                </div>
+                <div class="carouselle-item__p">
+                    <p class="carouselle-item__p-item">Ułuż dzienny plan posiłków <br>by uzyskać upragniony cel!</p>
+                </div>
+            </div>
+            <div class="items carouselle__item3">
+                <div class="carouselle-item__h2">
+                    <h2><b>Uważaj<br>by nie przekroczyć limitu kalorii!</b></h2>
+                </div>
+                <div class="carouselle-item__p">
+                    <p class="carouselle-item__p-item">Aplikacja powiadomi Cię jeżeli ilość kalori bedzie<br> zbliżała się do dziennego limitu!</p>
+                </div>
+            </div>
         </div>
+        
     </section>
     <section id="features" class="section section-features">
         <h1 class="section-features__title">Features</h1>
@@ -226,8 +256,9 @@
 
         </section>
 
-
+        <script src="js/carousel.js"></script>
         <script src="js/script.js"></script>
+
 </body>
 
 </html>
