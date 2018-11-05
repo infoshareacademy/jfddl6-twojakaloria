@@ -18,9 +18,11 @@ body {
   box-shadow: 3px 0 15px #000;
   z-index: 5;
 }
+
 .nav--active {
   top: 0;
 }
+
 .button-box {
   cursor: pointer;
   position: fixed;
@@ -30,6 +32,7 @@ body {
   width: 40px;
   z-index: 10;
 }
+
 .button-box__button {
   width: 40px;
   height: 4px;
@@ -38,6 +41,7 @@ body {
   top: 50px;
   right: 30px;
 }
+
 .button-box__button:before {
   content: "";
   display: block;
@@ -47,6 +51,7 @@ body {
   height: 4px;
   background-color: #eee;
 }
+
 .button-box__button:after {
   content: "";
   display: block;
@@ -56,11 +61,13 @@ body {
   height: 4px;
   background-color: #eee;
 }
+
 .nav__logo {
   margin: 0 auto;
   padding: 20px;
   transition: 0.3s all;
 }
+
 .nav__img {
   max-width: 100px;
   display: block;
@@ -82,6 +89,10 @@ body {
   flex-grow: 1;
   height: 100%;
   transition: all 0.3s;
+}
+
+.nav__item:hover {
+  background-color: #ea2027;
 }
 
 .nav__link {
@@ -140,9 +151,11 @@ body {
   height: 100%;
   width: 100%;
 }
+
 .section-hero__button-left {
   z-index: 3;
 }
+
 .section-hero__button-right {
   z-index: 3;
 }
@@ -151,13 +164,16 @@ body {
   width: 50px;
   height: 50px;
 }
+
 .section__buttons-img img:hover {
   transform: scale(1, 2);
 }
+
 .section__hero {
   height: 1000px;
   position: sticky;
 }
+
 .items {
   width: 100%;
   height: 1000px;
@@ -166,6 +182,7 @@ body {
   overflow: hidden;
   position: absolute;
 }
+
 .section .items {
   background-size: cover;
   position: absolute;
@@ -177,14 +194,17 @@ body {
   transition: opacity 3s;
   z-index: 0;
 }
+
 .section .items.current {
   opacity: 1;
   display: block;
   z-index: 1;
 }
+
 .carouselle__item1 {
   background-image: url("../img/img.jpg");
 }
+
 .carouselle-item__h2 {
   text-transform: uppercase;
   margin-top: 30vh;
@@ -192,6 +212,7 @@ body {
   color: black;
   font-size: 50px;
 }
+
 .carouselle-item__p {
   padding: 10px;
   display: flex;
@@ -199,18 +220,22 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .carouselle-item__p-item {
   text-align: center;
   margin-top: 5%;
   color: black;
   font-size: 30px;
 }
+
 .carouselle__item2 {
   background-image: url("../img/tlo1.jpeg");
 }
+
 .carouselle__item3 {
   background-image: url("../img/tlo2.jpg");
 }
+
 .carouselle-item__sign-link {
   padding: 15px 60px;
   font-size: 20px;
@@ -473,6 +498,7 @@ body {
   background-color: slategray;
   overflow: hidden;
 }
+
 .section-team__item {
   display: flex;
 }
@@ -482,6 +508,7 @@ body {
   display: block;
   margin-top: 4px;
 }
+
 .section-team__link-img {
   width: 60px;
   height: 60px;
@@ -542,12 +569,14 @@ body {
   align-items: center;
   padding: 20px;
 }
+
 .section-sign__h1 {
   margin: 0 auto;
   padding: 15px;
   text-align: center;
   font-size: 50px;
 }
+
 .section-sign__h2 {
   margin: 0 auto;
   padding: 15px;
@@ -703,18 +732,22 @@ body {
   text-align: center;
   opacity: 0.8;
 }
+
 .section-cookies__header {
   font-size: 20px;
 }
+
 .section-cookies__text {
   font-size: 15px;
 }
+
 .section-cookies__button {
   background-color: #ee5a24;
   height: 30px;
   width: 100px;
   border: 1px solid;
 }
+
 .cookies__hidden {
   display: none;
 }
