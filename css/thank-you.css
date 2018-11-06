@@ -48,7 +48,7 @@ body {
     transform: scale(1.2);
 }
 
-.instruction--active {
+.iawstruction--active {
     display: none;
 }
 
