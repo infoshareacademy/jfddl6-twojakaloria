@@ -18,7 +18,7 @@
             <img src="/img/salad.png" alt="LOGO" class="nav__img">
         </div>
         <ul class="nav__links">
-            <li class="nav__item"><a class="nav__link" href="#hero">Home</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--active" href="#hero">Home</a></li>
             <li class="nav__item"><a class="nav__link" href="#features">Features</a></li>
             <li class="nav__item"><a class="nav__link" href="#more">More</a></li>
             <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
@@ -27,14 +27,45 @@
     </nav>
     <div class="button-box"><span class="button-box__button"></span></div>
 
-    <section id="hero" class="section section-hero">
-        <div class="section-hero__h1">
-            <h1><b>Zacznij z&nbsp;nami <br>zdrowo jeść!</b></h1>
+    <section id="hero" class="section section__hero">
+        <div id="buttons" class="section__buttons-img">
+            <div id="left" class="section-hero__button-left">
+                <img src="img/canvasleft.png" class="section-hero__button-left-img" alt="button__prev">
+            </div>
+            <div id="right" class="section-hero__button-right">
+                <img src="img/canvasright.png" class="section-hero__button-left-img" alt="button__next">
+            </div>
         </div>
-        <div class="section-hero__p">
-            <p class="section-hero__item-p">Nie czekaj!</br> Zacznij już dziś liczyć kalorie!</br> Pomożemy Ci w tym!  </p>
-            <a class="section-hero__sign-link" href="#sign" > Zapisz się!</a>
+        <div class="carouselle">
+            <div class="items carouselle__item1">
+                <div class="carouselle-item__h2">
+                    <h2><b>Zacznij z&nbsp;nami <br>zdrowo jeść!</b></h2>
+                </div>
+                <div class="carouselle-item__p">
+                    <p class="carouselle-item__p-item">Nie czekaj!</br> Zacznij już dziś liczyć kalorie!</br> Pomożemy Ci
+                        w
+                        tym! </p>
+                    <a class="carouselle-item__sign-link" href="#sign"> Zapisz się!</a>
+                </div>
+            </div>
+            <div  class="items carouselle__item2">
+                <div class="carouselle-item__h2">
+                    <h2><b>Dodaj posiłki!</b></h2>
+                </div>
+                <div class="carouselle-item__p">
+                    <p class="carouselle-item__p-item">Ułuż dzienny plan posiłków <br>by uzyskać upragniony cel!</p>
+                </div>
+            </div>
+            <div class="items carouselle__item3">
+                <div class="carouselle-item__h2">
+                    <h2><b>Uważaj<br>by nie przekroczyć limitu kalorii!</b></h2>
+                </div>
+                <div class="carouselle-item__p">
+                    <p class="carouselle-item__p-item">Aplikacja powiadomi Cię jeżeli ilość kalori bedzie<br> zbliżała się do dziennego limitu!</p>
+                </div>
+            </div>
         </div>
+        
     </section>
     <section id="features" class="section section-features">
         <h1 class="section-features__title">Features</h1>
@@ -57,7 +88,7 @@
             </div>
         </div>
     </section>
-    <section id="more" class="section-more">
+    <section id="more" class="section-more section">
         <div class="section-more__container">
             <div class="section-more__row">
                 <div class="section-more__col section-more__col--text">
@@ -131,16 +162,41 @@
         </div>
     </section>
 
+    <section id="price" class="section-price">
+        <div class="section-price__container">
+            <h3 class="section-price__title">We invite you to cooperation</h3>
+            <div class="section-price__range-box">
+                <label class="section-price__label" for="price">Price:
+                    <span class="section-price__price">0$</span>
+                </label>
+                <input id="price" class="section-price__range" type="range" min="0" max="10" step="1" default="5">
+                <div class="section-price__value-box" id="price-value">Persons:
+                    <span class="section-price__value">5</span></div>
+            </div>
+            <div class="section-price__checkbox-box">
+                <label class="section-price__label--checkbox" for="option">Option</label>
+                <div class="section-price__checkbox--free">
+                    <label for="free" class="section-price__label--sub">Free Version</label>
+                    <input id="free" type="radio" name="option" class="section-price__check--free" value="Free" checked>
+                </div>
+                <div class="section-price__checkbox--premium">
+                    <label for="premium" class="section-price__label--sub">Premium Version</label>
+                    <input id="premium" type="radio" name="option" class="section-price__check--premium" value="Premium">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section id="team" class="section section-team ">
 
         <div class='section-team__container'>
             <h2 class='section-team__title'>Nasz team!</h2>
-            <div class='section-team__child '>
+            <div class='section-team__child'>
                 <img class='section-team__img' src='https://avatars0.githubusercontent.com/u/44070703?s=400&v=4'>
                 <h3 class='section-team__header'>Krystian Pietroń</h3>
                 <!-- <p class='section-team__text'></p> -->
-                <div class= section-team__item>
+                <div class=section-team__item>
                     <a class='section-team__link' target='_blank' href='https://www.linkedin.com/in/krystian-pietroń-80784a164'><img class="section-team__link-img" src="img/linkedin.png"></a>
                     <a class='section-team__link' target='_blank' href='https://github.com/KrystianPietron'><img class="section-team__link-img" src="img/github-logo.png"></a>
                     <a class='section-team__link' target='_blank' href='https://krystianpietron.github.io/homework/'><img class="section-team__link-img" src="img/js.png"></a>
@@ -148,11 +204,11 @@
                 </div>
             </div>
 
-            <div class='section-team__child '>
+            <div class='section-team__child'>
                 <img class='section-team__img' src='https://avatars2.githubusercontent.com/u/43744107?s=460&v=4'>
                 <h3 class='section-team__header'>Dawid Kurkiewicz</h3>
                 <!-- <p class='section-team__text'></p> -->
-                <div class= section-team__item>
+                <div class=section-team__item>
                     <a class='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/linkedin.png"></a>
                     <a class='section-team__link' target='_blank' href='https://github.com/DawidKurkiewicz'><img class="section-team__link-img" src="img/github-logo.png"></a>
                     <a class='section-team__link' target='_blank' href='https://dawidkurkiewicz.github.io/Mysite/'><img class="section-team__link-img" src="img/favdawid.png"></a>
@@ -164,7 +220,7 @@
                 <img class='section-team__img' src='https://avatars3.githubusercontent.com/u/33750272?s=400&v=4'>
                 <h3 class='section-team__header'>Krystian Kamiński</h3>
                 <!-- <p class='section-team__text'></p> -->
-                <div class= section-team__item>
+                <div class=section-team__item>
                     <a class='section-team__link' target='_blank' href=''><img class="section-team__link-img" src="img/linkedin.png"></a>
                     <a class='section-team__link' target='_blank' href='https://github.com/krkaminski'><img class="section-team__link-img" src="img/github-logo.png"></a>
                     <a class='section-team__link' target='_blank' href='https://krkaminski.github.io/my-page/'><img class="section-team__link-img" src="img/js.png"></a>
@@ -191,20 +247,18 @@
         </section>
 
 
-        <section id="contact" class="section section-contact">
-
-        </section>
-
 
         <section id="cookies" class="section-cookies">
-        <h3 class="section-cookies__header">Ta strona używa plików Cookie</h3>
-        <p class="section-cookies__text">Zgodnie z polskim prawem mamy obowiązek informować o używaniu plików Cookie</p>
-        <button id="cookies__button" class="section-cookies__button">Akceptuj</button>
+            <h3 class="section-cookies__header">Ta strona używa plików Cookie</h3>
+            <p class="section-cookies__text">Zgodnie z polskim prawem mamy obowiązek informować o używaniu plików
+                Cookie</p>
+            <button id="cookies__button" class="section-cookies__button">Akceptuj</button>
 
         </section>
 
-
+        <script src="js/carousel.js"></script>
         <script src="js/script.js"></script>
+
 </body>
 
 </html>
