@@ -2,11 +2,14 @@
 class Game {
     constructor(container) {
         this.container = container
-        this.items = []
-        this.itemPosition = {
-            x: 300,
+        this.items = [{
+            x: 450,
             y: 200
-        }
+        },
+        {
+            x: 220,
+            y: 200
+        }]
 
         this.init()
     }
@@ -20,16 +23,18 @@ class Game {
         this.container.style.height = '500px'
         this.container.style.width =  '500px'
 
-        this.addItem()
+        this.items.forEach( (item) => {
+            this.renderItem(item)
+        })
     }
 
-    addItem() {
+    renderItem(item) {
         const itemDiv = document.createElement('div')
         itemDiv.style.height = `30px`
         itemDiv.style.width = `30px`
         itemDiv.style.position = 'absolute'
-        itemDiv.style.top = this.itemPosition.y + 'px'
-        itemDiv.style.left = this.itemPosition.x + 'px'
+        itemDiv.style.top = item.y + 'px'
+        itemDiv.style.left = item.x + 'px'
         itemDiv.style.backgroundColor = 'black'
         this.container.appendChild(itemDiv)
 
