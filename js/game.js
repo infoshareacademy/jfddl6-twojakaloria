@@ -3,12 +3,12 @@ class Game {
     constructor(container) {
         this.container = container
         this.items = [{
-            x: 450,
-            y: 200
+            x: 470,
+            y: 0
         },
         {
             x: 220,
-            y: 200
+            y: 0
         }]
 
         this.init()
@@ -26,6 +26,7 @@ class Game {
         this.items.forEach( (item) => {
             this.renderItem(item)
         })
+
     }
 
     renderItem(item) {
@@ -33,10 +34,12 @@ class Game {
         itemDiv.style.height = `30px`
         itemDiv.style.width = `30px`
         itemDiv.style.position = 'absolute'
-        itemDiv.style.top = item.y + 'px'
+        itemDiv.style.top = `${item.y = item.y + 5}px`
         itemDiv.style.left = item.x + 'px'
         itemDiv.style.backgroundColor = 'black'
         this.container.appendChild(itemDiv)
+        item.y = item.y
+        setInterval( () => this.renderItem(item), 500)
 
     }
     itemMove() {
