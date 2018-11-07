@@ -80,6 +80,10 @@ body {
     font-size: 25px;
 }
 
+.game-container {
+    margin: 0 auto 50px auto;
+}
+
 @media only screen and (max-width: 430px) {
     .section-thanks__container h1 {
         font-size: 50px;
