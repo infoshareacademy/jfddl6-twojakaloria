@@ -1,13 +1,28 @@
 class Game {
     constructor(container) {
         this.container = container
-        this.items = []
+        this.items = [{
+            x: 200,
+            y: -5
+        }]
 
         this.init()
     }
     init() {
         this.render()
-        this.addItem()
+        const interval = setInterval( () => {
+            this.addItem()
+
+            for (let i = 0; i < this.items.length; i++) {
+                this.items.forEach(element => {
+                    this.renderItem(element)
+                })
+            }
+            if (this.items.length === 5) {
+                clearInterval(interval)
+            }
+        }, 1000)
+        this.render()
     }
     render() {
         this.container.innerHTML = ''
@@ -21,22 +36,13 @@ class Game {
         })
 
     }
-    itemPosition() {
-        const position = {
-            x: Math.floor(Math.random() * 300),
-            y: -5
-        }
-        return position
-    }
 
     addItem() {
-        const interval = setInterval(() => {
-            this.items.push(this.itemPosition())
-            this.render()
-            if (this.items.length >= 5) {
-                clearInterval(interval)
-            }
-        }, 1000)
+        this.items.push({
+            x: Math.round(Math.random() * 300),
+            y: -5
+        })
+        this.render()
     }
 
     renderItem(item) {
@@ -45,7 +51,7 @@ class Game {
         itemDiv.style.height = `30px`
         itemDiv.style.width = `30px`
         itemDiv.style.position = 'absolute'
-        itemDiv.style.left = this.itemPosition().x
+        itemDiv.style.left = item.x + 'px'
         itemDiv.style.backgroundColor = 'black'
         this.container.appendChild(itemDiv)
         itemDiv.style.top = `${item.y = item.y +5}px`
@@ -57,8 +63,6 @@ class Game {
                 itemDiv.style.display = 'none'
             }
         }, 1000)
-
-
 
     }
 }
