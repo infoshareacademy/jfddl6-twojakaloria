@@ -27,7 +27,7 @@ class Game {
   }
   addItem(item) {
     for (let i = 0; i <= 5; i++) {
-      this.items[i]=(`${Math.round(Math.random() * 450)}, ${-5)}`;
+      this.items[i]=(`${Math.round(Math.random() * 450)}, ${-5}`);
       console.log(this.items);
     }
   }
@@ -68,7 +68,6 @@ class Game {
     this.container.appendChild(itemDiv);
   }
 }
-
 const ourContainer = document.querySelector(".game-container");
 
 const game = new Game(ourContainer);
