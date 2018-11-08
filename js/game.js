@@ -3,25 +3,18 @@ class Game {
         this.container = container
         this.items = [{
             x: 200,
-            y: -5
-        }]
+            y: 0
+        },
+        {
+            x: 299,
+            y: 0
+        }
+    ]
+    this.speed = 5
 
         this.init()
     }
     init() {
-        this.render()
-        const interval = setInterval( () => {
-            this.addItem()
-
-            for (let i = 0; i < this.items.length; i++) {
-                this.items.forEach(element => {
-                    this.renderItem(element)
-                })
-            }
-            if (this.items.length === 5) {
-                clearInterval(interval)
-            }
-        }, 1000)
         this.render()
     }
     render() {
@@ -37,14 +30,6 @@ class Game {
 
     }
 
-    addItem() {
-        this.items.push({
-            x: Math.round(Math.random() * 300),
-            y: -5
-        })
-        this.render()
-    }
-
     renderItem(item) {
 
         const itemDiv = document.createElement('div')
@@ -54,16 +39,7 @@ class Game {
         itemDiv.style.left = item.x + 'px'
         itemDiv.style.backgroundColor = 'black'
         this.container.appendChild(itemDiv)
-        itemDiv.style.top = `${item.y = item.y +5}px`
-
-        const movingItem = setInterval(() => {
-            itemDiv.style.top = `${item.y = item.y +5}px`
-            if (itemDiv.style.top >= '500px') {
-                clearInterval(movingItem)
-                itemDiv.style.display = 'none'
-            }
-        }, 1000)
-
+        itemDiv.style.top = item.y + 'px'
     }
 }
 
