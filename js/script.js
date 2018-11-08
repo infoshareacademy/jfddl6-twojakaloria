@@ -1,7 +1,24 @@
 const menu = document.querySelector('.nav');
 const menuButton = document.querySelector('.button-box');
 const menuItems = document.querySelectorAll('.nav__item')
+const priceSec = document.querySelector('.section-price')
+const teamImg = document.querySelectorAll('.section-team__child')
 
+
+/*
+Start of Animated images
+*/
+
+window.addEventListener('scroll', () => {
+    let scrollPosition = window.scrollY + menu.clientHeight
+    if (team.offsetTop - (priceSec.clientHeight / 2) <= scrollPosition) {
+        teamImg.forEach(img => {
+            img.classList.add('section-team__child--animated')
+        })
+    }
+})
+
+/* End of animated images */
 
 
 menuButton.addEventListener('click', () => {
@@ -55,7 +72,6 @@ const persons = document.querySelector('.section-price__value');
 const range = document.querySelector('.section-price__range')
 const checkboxFree = document.querySelector('.section-price__check--free');
 const checkboxPremium = document.querySelector('.section-price__check--premium')
-
 const calculatePrice = () => {
     price.textContent = ((parseInt(persons.textContent, 10) * 5) + '$')
 }
@@ -67,14 +83,13 @@ range.addEventListener('change', () => {
         calculatePrice();
     }
 });
-
 checkboxPremium.addEventListener('change', () => {
     calculatePrice();
 })
-
 
 checkboxFree.addEventListener('change', () => {
     if (checkboxFree.checked) {
         price.textContent = range.value * 0 + '$';
     }
 })
+

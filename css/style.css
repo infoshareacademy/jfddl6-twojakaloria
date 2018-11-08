@@ -18,6 +18,7 @@ background: black;
   top: -600px;
   transition: all 0.3s;
   box-shadow: 3px 0 15px #000;
+  z-index: 5;
 }
 
 .nav--active {
@@ -31,7 +32,8 @@ background: black;
   right: 30px;
   height: 40px;
   width: 40px;
-  z-index: 3;
+  z-index: 10;
+
 }
 
 .button-box__button {
@@ -81,7 +83,6 @@ background: black;
   flex-direction: column;
   margin: 0;
   padding: 0;
-  list-style: none;
   text-align: center;
   font-size: 20px;
 }
@@ -95,7 +96,6 @@ background: black;
 
 .nav__item:hover {
   background-color: #ea2027;
-  cursor: pointer;
 }
 
 .nav__link {
@@ -117,10 +117,15 @@ background: black;
     position: fixed;
     display: flex;
     top: 0;
+    z-index: 2;
   }
 
   .nav__links {
     flex-direction: row;
+  }
+
+  .button-box {
+    display: none;
   }
 
   .button-box__button {
@@ -141,15 +146,69 @@ background: black;
 /* end of section nav */
 
 /* section hero */
-.section-hero {
-  background-image: url("../img/img.jpg");
-  background-size: cover;
+
+.section__buttons-img {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-.section-hero__h1 {
+.section-hero__button-left {
+  z-index: 3;
+}
+
+.section-hero__button-right {
+  z-index: 3;
+}
+
+.section__buttons-img img {
+  width: 50px;
+  height: 50px;
+}
+
+.section__buttons-img img:hover {
+  transform: scale(1, 2);
+}
+
+.section__hero {
+  height: 1000px;
+  position: sticky;
+}
+
+.items {
+  width: 100%;
+  height: 1000px;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+}
+
+.section .items {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 3s;
+  z-index: 0;
+}
+
+.section .items.current {
+  opacity: 1;
+  display: block;
+  z-index: 1;
+}
+
+.carouselle__item1 {
+  background-image: url("../img/img.jpg");
+}
+
+.carouselle-item__h2 {
   text-transform: uppercase;
   margin-top: 30vh;
   text-align: center;
@@ -157,7 +216,7 @@ background: black;
   font-size: 50px;
 }
 
-.section-hero__p {
+.carouselle-item__p {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -165,14 +224,22 @@ background: black;
   align-items: center;
 }
 
-.section-hero__item-p {
+.carouselle-item__p-item {
   text-align: center;
   margin-top: 5%;
   color: black;
   font-size: 30px;
 }
 
-.section-hero__sign-link {
+.carouselle__item2 {
+  background-image: url("../img/tlo1.jpeg");
+}
+
+.carouselle__item3 {
+  background-image: url("../img/tlo2.jpg");
+}
+
+.carouselle-item__sign-link {
   padding: 15px 60px;
   font-size: 20px;
   background: #f7a11f75;
@@ -180,6 +247,7 @@ background: black;
   color: black;
   font-size: 30px;
   transition: all 0.3s;
+  z-index: 2;
 }
 
 .section-hero__sign-link:hover {
@@ -206,18 +274,15 @@ background: black;
 /* section feautures */
 .section-features {
   background-color: #f79f1f;
-  font-family: sans-serif;
 }
 
 .section-features__title {
   color: #eee;
-  text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
   padding: 20px;
   font-size: 35px;
   margin: 0;
-  text-shadow: 5px 5px 15px #000;
 }
 
 .section-features__container {
@@ -382,6 +447,7 @@ background: black;
   background: #f79f1f;
   font-family: arial;
   color: black;
+  overflow: hidden;
 }
 
 .section-team__child {
@@ -393,6 +459,13 @@ background: black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateY(800px);
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.section-team__child--animated {
+  transform: translateY(0);
 }
 
 .section-team__header {
@@ -461,6 +534,14 @@ background: black;
 @media only screen and (max-width: 768px) {
   .section-team__child {
     flex-basis: 100%;
+  }
+
+  .section-team__child {
+    transform: translateX(-500px) translateY(0);
+  }
+
+  .section-team__child--animated {
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -633,6 +714,17 @@ background: black;
   text-align: center;
 }
 
+@media (max-width: 500px) {
+  .section-price__title {
+    font-size: 25px;
+  }
+
+  .section-price__range {
+    min-width: 200px;
+    width: 60%;
+  }
+}
+
 .section-cookies {
   position: fixed;
   font-size: 12px;
@@ -643,18 +735,22 @@ background: black;
   text-align: center;
   opacity: 0.8;
 }
+
 .section-cookies__header {
   font-size: 20px;
 }
+
 .section-cookies__text {
   font-size: 15px;
 }
+
 .section-cookies__button {
   background-color: #ee5a24;
   height: 30px;
   width: 100px;
   border: 1px solid;
 }
+
 .cookies__hidden {
   display: none;
 }
