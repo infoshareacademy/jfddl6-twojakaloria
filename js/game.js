@@ -24,15 +24,16 @@ class Game {
   }
   render() {
     this.container.innerHTML = "";
-
     this.container.style.backgroundColor = "red";
+    this.container.style.position = "relative";
     this.container.style.height = "500px";
     this.container.style.width = "500px";
     this.items.forEach(item => {
       this.renderItem(item);
     });
-    this.truck.forEach(truck =>{
-    this.renderTruck(truck);});
+    this.truck.forEach(truck => {
+      this.renderTruck(truck);
+    });
   }
   renderItem(item) {
     const truckDiv = document.createElement("div");
@@ -55,17 +56,21 @@ class Game {
 
   renderTruck(truck) {
     const itemDiv = document.createElement("div");
+    this.container.addEventListener("mousemove", function(event) {
+      eventMouse(event);
+    });
+    const eventMouse = e => {
+      if (e.offsetX <= 455){
+      itemDiv.style.left = e.offsetX + "px";}
+    };
     itemDiv.style.height = `30px`;
     itemDiv.style.width = `50px`;
     itemDiv.style.position = "absolute";
-    itemDiv.style.left = truck.x+'px'
+    itemDiv.style.left = truck.x + "0px";
     itemDiv.style.backgroundColor = "white";
     itemDiv.style.top = truck.y + "px";
     this.container.appendChild(itemDiv);
-    this.container.addEventListener('mousemove', function(event) {eventMouse(event)})
-    const eventMouse = (e) => {let x = e.clientX;return x;}
-
-}
+  }
 }
 
 const ourContainer = document.querySelector(".game-container");

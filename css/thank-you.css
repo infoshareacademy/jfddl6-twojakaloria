@@ -83,6 +83,7 @@ body {
 .game-container {
     margin: 0 auto 50px auto;
     position: relative;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 430px) {
