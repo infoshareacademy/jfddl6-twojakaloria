@@ -25,9 +25,10 @@ class Game {
     });
       this.renderTruck(console.log(this.truck));
   }
-  addItem(item) {
+  addItem() {
     for (let i = 0; i <= 5; i++) {
-      this.items[i]=(`${Math.round(Math.random() * 450)}, ${-5}`);
+      const item ={x:Math.round(Math.random()*460),y:-5}
+      this.items[i]=(item);
       console.log(this.items);
     }
   }
