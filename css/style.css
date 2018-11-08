@@ -5,8 +5,7 @@ body {
   font-weight: normal;
 }
 .active {
-  background: yellow;
-
+background: black;
 }
 /* section nav */
 .nav {
@@ -16,7 +15,7 @@ body {
   background-color: #ee5a24;
   width: 100%;
   position: fixed;
-  top: -500px;
+  top: -600px;
   transition: all 0.3s;
   box-shadow: 3px 0 15px #000;
 }
@@ -32,6 +31,7 @@ body {
   right: 30px;
   height: 40px;
   width: 40px;
+  z-index: 3;
 }
 
 .button-box__button {
