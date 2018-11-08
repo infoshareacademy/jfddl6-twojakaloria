@@ -1,7 +1,12 @@
 class Game {
   constructor(container) {
     this.container = container;
-    this.items = []
+    this.items = [{x: 128, y: -5},
+     {x: 169, y: -5},
+      {x: 420, y: -5},
+     {x: 192, y: -5},
+      {x: 423, y: -5},
+      {x: 389, y: -5}]
     this.truck = [
       {
         x: 0,
@@ -11,7 +16,8 @@ class Game {
     this.init();
   }
   init() {
-    this.addItem();
+    // this.addItem();
+    // console.log(this.items);
     this.render();
   }
   render() {
@@ -20,18 +26,17 @@ class Game {
     this.container.style.position = "relative";
     this.container.style.height = "500px";
     this.container.style.width = "500px";
-    this.items.forEach((item,index ) => {
-      this.renderItem(item[index]);
+    this.items.forEach((item) => {
+      this.renderItem(item);
     });
       this.renderTruck(console.log(this.truck));
   }
-  addItem() {
-    for (let i = 0; i <= 5; i++) {
-      const item ={x:Math.round(Math.random()*460),y:-5}
-      this.items[i]=(item);
-      console.log(this.items);
-    }
-  }
+  // addItem() {
+  //   for (let i = 0; i <= 5; i++) {
+  //     const item ={x:Math.round(Math.random()*460),y:-5}
+  //     this.items[i]=(item);
+  //   }
+  // }
   renderItem(item) {
     const truckDiv = document.createElement("div");
     truckDiv.style.height = `30px`;
