@@ -1,16 +1,7 @@
 class Game {
   constructor(container) {
     this.container = container;
-    this.items = [
-      {
-        x: 470,
-        y: -5
-      },
-      {
-        x: 220,
-        y: -5
-      }
-    ];
+    this.items = []
     this.truck = [
       {
         x: 0,
@@ -20,6 +11,7 @@ class Game {
     this.init();
   }
   init() {
+    this.addItem();
     this.render();
   }
   render() {
@@ -28,12 +20,16 @@ class Game {
     this.container.style.position = "relative";
     this.container.style.height = "500px";
     this.container.style.width = "500px";
-    this.items.forEach(item => {
-      this.renderItem(item);
+    this.items.forEach((item,index ) => {
+      this.renderItem(item[index]);
     });
-    this.truck.forEach(truck => {
-      this.renderTruck(truck);
-    });
+      this.renderTruck(console.log(this.truck));
+  }
+  addItem(item) {
+    for (let i = 0; i <= 5; i++) {
+      this.items[i]=(`${Math.round(Math.random() * 450)}, ${-5)}`;
+      console.log(this.items);
+    }
   }
   renderItem(item) {
     const truckDiv = document.createElement("div");
@@ -43,15 +39,14 @@ class Game {
     truckDiv.style.left = item.x + "px";
     truckDiv.style.backgroundColor = "black";
     this.container.appendChild(truckDiv);
-    truckDiv.style.top = `${(item.y = item.y + 5)}px`;
-
+    // truckDiv.style.top = `${item.y = item.y + 5}px`;
     const movingItem = setInterval(() => {
-      truckDiv.style.top = `${(item.y = item.y + 5)}px`;
+      truckDiv.style.top = `${item.y = item.y + 5}px`;
       if (truckDiv.style.top === "470px") {
         clearInterval(movingItem);
         truckDiv.style.display = "none";
       }
-    }, 100);
+    }, 500);
   }
 
   renderTruck(truck) {
@@ -60,8 +55,9 @@ class Game {
       eventMouse(event);
     });
     const eventMouse = e => {
-      if (e.offsetX <= 455){
-      itemDiv.style.left = e.offsetX + "px";}
+      if (e.offsetX <= 455) {
+        itemDiv.style.left = e.offsetX + "px";
+      }
     };
     itemDiv.style.height = `30px`;
     itemDiv.style.width = `50px`;
