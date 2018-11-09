@@ -10,7 +10,7 @@ Start of Animated images
 */
 
 window.addEventListener('scroll', () => {
-    let scrollPosition = window.scrollY + menu.clientHeight
+    let scrollPosition = window.scrollY + 3 * (menu.clientHeight)
     if (team.offsetTop - (priceSec.clientHeight / 2) <= scrollPosition) {
         teamImg.forEach(img => {
             img.classList.add('section-team__child--animated')
@@ -41,12 +41,14 @@ window.addEventListener(
         section.forEach(section => {
             if (inView.is(section)) {
                 const id = section.getAttribute('id')
-                const menuEl = document.querySelector('a[href="#' + id + '"]')
+                const menuEl = document.querySelector('#nav-' + id)
 
-                document.querySelectorAll('.nav__link')
+                document.querySelectorAll('.nav__item')
                     .forEach(menuEl => menuEl.classList.remove('active'))
 
                 menuEl.classList.add('active')
+
+                return
             }
         })
     }
