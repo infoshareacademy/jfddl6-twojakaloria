@@ -8,30 +8,31 @@ class Game {
         y: 465
       }
     ];
-    this.init();
+    this.init()
   }
   init() {
-    this.addItem();
-    // console.log(this.items);
-    this.render();
+      this.addItem()
+      this.render()
+
+    this.renderTruck();
   }
   render() {
-    this.container.innerHTML = "";
+    // this.container.innerHTML = "";
     this.container.style.backgroundColor = "red";
     this.container.style.position = "relative";
     this.container.style.height = "500px";
     this.container.style.width = "500px";
     this.items.forEach((item) => {
-      this.renderItem(item);
-    });
-      this.renderTruck(truck);
+      this.renderItem(item);})
   }
   addItem() {
-    for (let i = 0; i <= 5; i++) {
+setInterval(() =>{
+ 
       const item ={x:Math.round(Math.random()*460),y:-5}
-      this.items[i]=(item);
-    }
-  }
+      this.items[0]=(item);
+      this.render();
+      console.log(this.items)},2000)
+}
   renderItem(item) {
     const itemDiv = document.createElement("div");
     itemDiv.style.height = `30px`;
@@ -39,14 +40,13 @@ class Game {
     itemDiv.style.position = "absolute";
     itemDiv.style.left = item.x + "px";
     itemDiv.style.backgroundColor = "black"
-    // itemDiv.style.top = `${item.y = item.y + 5}px`;
     const movingItem = setInterval(() => {
       itemDiv.style.top = `${item.y = item.y + 5}px`;
       if (itemDiv.style.top === "470px") {
         clearInterval(movingItem);
         itemDiv.style.display = "none";
       }
-    }, 500);
+    }, 200);
     this.container.appendChild(itemDiv);
   }
 
@@ -55,7 +55,7 @@ class Game {
     truckDiv.style.height = `30px`;
     truckDiv.style.width = `50px`;
     truckDiv.style.position = "absolute";
-    truckDiv.style.left = truck.x + "0px";
+    truckDiv.style.left = truck.x + "px";
     truckDiv.style.backgroundColor = "white";
     truckDiv.style.top = truck.y + "px";
     this.container.addEventListener("mousemove", function(event) {
