@@ -2,12 +2,6 @@ class Game {
   constructor(container) {
     this.container = container;
     this.items = [];
-    this.trucks = [
-      {
-        x: 0,
-        y: 465
-      }
-    ];
     this.init();
   }
   init() {
@@ -16,7 +10,6 @@ class Game {
  this.renderTruck();
   }
   render() {
-    // this.container.innerHTML = "";
     this.container.style.backgroundColor = "red";
     this.container.style.position = "relative";
     this.container.style.height = "500px";
@@ -31,7 +24,7 @@ class Game {
       this.items[0] = item;
       this.render();
       console.log(this.items);
-    }, 1000);
+    }, 2000);
   }
   renderItem(item) {
     const itemDiv = document.createElement("div");
@@ -41,13 +34,12 @@ class Game {
     itemDiv.style.left = item.x + "px";
     itemDiv.style.backgroundColor = "black";
     itemDiv.style.zIndex = 1;
-    const movingItem = setInterval(() => {
-      itemDiv.style.top = `${(item.y = item.y + 5)}px`;
+    setInterval(() => {
+      itemDiv.style.top = `${(item.y = item.y + 1)}px`;
       if (itemDiv.style.top === "470px") {
-        clearInterval(movingItem);
-        itemDiv.style.display = "none";
+        this.container.removeChild(itemDiv)
       }
-    }, 50);
+    },30);
     this.container.appendChild(itemDiv);
   }
 
@@ -56,7 +48,6 @@ class Game {
     truckDiv.style.height = `30px`;
     truckDiv.style.width = `50px`;
     truckDiv.style.position = "absolute";
-    // truckDiv.style.left = 0 + "px";
     truckDiv.style.backgroundColor = "white";
     truckDiv.style.top = 465+'px';
     truckDiv.style.zIndex = 3;
@@ -71,6 +62,5 @@ class Game {
     this.container.appendChild(truckDiv);
   }
 }
-const ourContainer = document.querySelector(".game-container");
-
+const ourContainer = document.querySelector(".game-container")
 const game = new Game(ourContainer);
