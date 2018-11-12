@@ -1,96 +1,101 @@
 /* section thanks for index2.html */
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .section-thanks {
-    margin: 0 auto;
-    justify-content: center;
-    background-image: url(../img/img.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  background-image: url(../img/img.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
 
 .section-thanks__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .section-thanks__container h1 {
-    font-size: 80px;
-    text-align: center;
+  font-size: 80px;
+  text-align: center;
 }
 
 .section-thanks__container h2 {
-    font-size: 40px;
-    text-align: center;
-    max-width: 1000px;
+  font-size: 40px;
+  text-align: center;
+  max-width: 1000px;
 }
 
 .section-thanks__button {
-    padding: 15px 60px;
-    font-size: 20px;
-    background: #f7a11f75;
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    transition: all 0.3s;
-    text-align: center;
-    margin: 20px;
+  padding: 15px 60px;
+  font-size: 20px;
+  background: #f7a11f75;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  transition: all 0.3s;
+  text-align: center;
+  margin: 20px;
 }
 
 .section-thanks__button:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .instruction--active {
-    display: none;
+  display: none;
 }
 
 .button-box {
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.3s;
-    margin-bottom: 40px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+  margin-bottom: 40px;
 }
 
 .button-box__button {
-    padding: 15px 60px;
-    font-size: 20px;
-    background: #f7a11f75;
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    text-align: center;
-    margin: 20px;
+  padding: 15px 60px;
+  font-size: 20px;
+  background: #f7a11f75;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
 }
 
 .button-box:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .section-instruction__list--item {
-    padding: 10px;
-    color: black;
-    font-size: 25px;
+  padding: 10px;
+  color: black;
+  font-size: 25px;
 }
 
 .game-container {
-    margin: 0 auto 50px auto;
+  box-sizing: content-box;
+  height: 425px;
+  width: 400px;
+  margin: 0 auto 50px auto;
+  position: relative;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 430px) {
-    .section-thanks__container h1 {
-        font-size: 50px;
-    }
-    .section-thanks__container h2 {
-        font-size: 30px;
-    }
+  .section-thanks__container h1 {
+    font-size: 50px;
+  }
+  .section-thanks__container h2 {
+    font-size: 30px;
+  }
 }
 
 /* end of section for index2.html */
