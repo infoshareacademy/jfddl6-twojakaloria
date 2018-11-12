@@ -7,6 +7,7 @@ class Game {
     this.boardWidth = 400
 
     this.rankBoard = null
+    this.score = 0
     this.rankBoardHeight = 25
     this.rankBoardWidth = this.boardWidth
 
@@ -45,6 +46,8 @@ class Game {
     this.rankBoard.style.height = this.rankBoardHeight + 'px'
     this.rankBoard.style.width = this.rankBoardWidth + 'px'
     this.rankBoard.style.backgroundColor = 'black'
+    this.rankBoard.style.color = 'white'
+    this.rankBoard.style.textAlign = 'center'
     this.rankBoard.style.margin = '0 auto'
     this.container.appendChild(this.rankBoard)
   }
@@ -124,12 +127,18 @@ class Game {
 
   catchObstacleInTheBasket(i) {
     this.deleteObstacle(i)
+    this.scoreUp()
   }
 
   deleteObstacle(i) {
     this.obstacles = this.obstacles
       .slice(0, i)
       .concat(this.obstacles.slice(i + 1))
+  }
+
+  scoreUp() {
+    this.score++
+    this.render()
   }
 
   gameTick() {
@@ -148,6 +157,7 @@ class Game {
 
   render() {
     this.board.innerHTML = ''
+    this.rankBoard.innerText = this.score
     this.board.appendChild(this.basket.render())
 
     this.obstacles.forEach((obstacle, i) => {
