@@ -1,66 +1,77 @@
 class Game {
   constructor(container) {
-    this.container = container;
-    this.items = [];
-    this.init();
-  }
-  init() {
-    this.addItem();
-    this.render();
- this.renderTruck();
-  }
-  render() {
-    this.container.style.backgroundColor = "red";
-    this.container.style.position = "relative";
-    this.container.style.height = "500px";
-    this.container.style.width = "500px";
-    this.items.forEach(item => {
-      this.renderItem(item);
-    });
-  }
-  addItem() {
-    setInterval(() => {
-      const item = { x: Math.round(Math.random() * 460), y: -5 };
-      this.items[0] = item;
-      this.render();
-      console.log(this.items);
-    }, 2000);
-  }
-  renderItem(item) {
-    const itemDiv = document.createElement("div");
-    itemDiv.style.height = `30px`;
-    itemDiv.style.width = `30px`;
-    itemDiv.style.position = "absolute";
-    itemDiv.style.left = item.x + "px";
-    itemDiv.style.backgroundColor = "black";
-    itemDiv.style.zIndex = 1;
-    setInterval(() => {
-      itemDiv.style.top = `${(item.y = item.y + 1)}px`;
-      if (itemDiv.style.top === "470px") {
-        this.container.removeChild(itemDiv)
-      }
-    },30);
-    this.container.appendChild(itemDiv);
+    this.container = document.querySelector('.game-container') || container;
+
+    this.board = null
+    this.boardHeight = 400
+    this.boardWidth = 400
+
+    this.rankBoard = null
+    this.rankBoardHeight = 25
+    this.rankBoardWidth = this.boardWidth
+
+    this.basketDimension = 40
+    this.basket = this.createBasket()
+
+    this.init()
   }
 
-  renderTruck() {
-    const truckDiv = document.createElement("div");
-    truckDiv.style.height = `30px`;
-    truckDiv.style.width = `50px`;
-    truckDiv.style.position = "absolute";
-    truckDiv.style.backgroundColor = "white";
-    truckDiv.style.top = 465+'px';
-    truckDiv.style.zIndex = 3;
-    this.container.addEventListener("mousemove", function(event) {
-      eventMouse(event);
-    });
-    const eventMouse = e => {
-      if (e.offsetX <= 455) {
-        truckDiv.style.left = e.offsetX + "px";
-      }
-    };
-    this.container.appendChild(truckDiv);
+  makeBoard() {
+    this.board = document.createElement('div')
+    this.board.style.height = this.boardHeight + 'px'
+    this.board.style.width = this.boardWidth + 'px'
+    this.board.style.backgroundColor = 'red'
+    this.board.style.margin = '0 auto'
+    this.container.appendChild(this.board)
+  }
+
+  makeRanking() {
+    this.rankBoard = document.createElement('div')
+    this.rankBoard.style.height = this.rankBoardHeight + 'px'
+    this.rankBoard.style.width = this.rankBoardWidth + 'px'
+    this.rankBoard.style.backgroundColor = 'black'
+    this.rankBoard.style.margin = '0 auto'
+    this.container.appendChild(this.rankBoard)
+  }
+
+  createBasket() {
+    return new Basket(
+      this.boardWidth - this.basketDimension / 2,
+      this.boardHeight - this.basketDimension + this.rankBoardHeight,
+      this.basketDimension
+    )
+  }
+
+  render() {
+    this.board.appendChild(this.basket.render())
+  }
+
+  init() {
+    this.makeRanking()
+    this.makeBoard()
+    this.render()
+  }
+
+}
+
+class Basket {
+  constructor(maxX, maxY, basketDimension) {
+    this.x = maxX / 2
+    this.y = maxY
+    this.basketDimension = basketDimension
+  }
+
+  render() {
+    const basketDiv = document.createElement('div')
+    basketDiv.style.height = this.basketDimension + 'px'
+    basketDiv.style.width = this.basketDimension + 'px'
+    basketDiv.style.backgroundColor = 'white'
+    basketDiv.style.position = 'absolute'
+    basketDiv.style.left = this.x + 'px'
+    basketDiv.style.top = this.y + 'px'
+
+    return basketDiv
   }
 }
-const ourContainer = document.querySelector(".game-container")
-const game = new Game(ourContainer);
+
+const newGame = new Game()
