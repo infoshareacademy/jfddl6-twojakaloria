@@ -18,7 +18,7 @@ class Game {
 
     this.gameInterval = null
     this.tickCount = 0
-    this.speed = 100
+    this.speed = 200
 
     this.init()
   }
@@ -27,6 +27,7 @@ class Game {
     this.makeRanking()
     this.makeBoard()
     this.startGameInterval()
+    this.addEventListeners()
     this.render()
   }
 
@@ -54,6 +55,23 @@ class Game {
       this.boardHeight - this.basketDimension,
       this.basketDimension
     )
+  }
+
+  addEventListeners() {
+    window.addEventListener('keydown', e => {
+      switch (e.key) {
+        case "ArrowLeft":
+          e.preventDefault()
+          this.basket.moveLeft()
+          break
+        case 'ArrowRight':
+          e.preventDefault()
+          this.basket.moveRight()
+          break
+        default:
+          break
+      }
+    })
   }
 
   addObstacle() {
@@ -126,6 +144,18 @@ class Basket {
     basketDiv.style.top = this.y + 'px'
 
     return basketDiv
+  }
+
+  moveLeft() {
+    if (this.x > 0) {
+      this.x = this.x - 20
+    }
+  }
+
+  moveRight() {
+    if (this.x < 360) {
+      this.x = this.x + 20
+    }
   }
 }
 
