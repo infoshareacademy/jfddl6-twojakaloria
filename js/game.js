@@ -96,6 +96,36 @@ class Game {
       this.deleteObstacle(i)
   }
 
+  detectObstaclesInTheBasket() {
+    this.obstacles.forEach((obstacle, i) => {
+      const isColliding = this.detectCollision({
+        x: obstacle.x,
+        y: obstacle.y,
+        width: obstacle.obstacleDimension,
+        height: obstacle.obstacleDimension
+      }, {
+        x: this.basket.x,
+        y: this.basket.y,
+        width: this.basket.basketDimension,
+        height: this.basket.basketDimension
+      })
+
+      if (isColliding) {
+        this.catchObstacleInTheBasket(i)
+      }
+    })
+  }
+
+  detectCollision(a, b) {
+    return !(
+      a.y + a.height < b.y || a.y > b.y + b.height || a.x + a.width < b.x || a.x > b.x + b.width
+    )
+  }
+
+  catchObstacleInTheBasket(i) {
+    this.deleteObstacle(i)
+  }
+
   deleteObstacle(i) {
     this.obstacles = this.obstacles
       .slice(0, i)
@@ -106,6 +136,7 @@ class Game {
     if (this.tickCount === 0) this.addObstacle()
 
     this.tickCount++
+    this.detectObstaclesInTheBasket()
     this.moveObstacles()
 
     if (this.tickCount > 10) this.tickCount = 0
