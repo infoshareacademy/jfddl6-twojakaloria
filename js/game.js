@@ -188,8 +188,7 @@ class Game {
         this.container.innerHTML = ''
         this.board.innerHTML = ''
         this.rankBoard.innerHTML = ''
-        this.lifes = 3
-        this.init()
+        location.reload()
       })
     }
   }
