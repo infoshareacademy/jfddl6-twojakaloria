@@ -19,9 +19,10 @@ class Game {
 
     this.gameInterval = null
     this.tickCount = 0
-    this.speed = 200
+    this.speed = 100
 
     this.level = 1;
+    this.lifes = 1;
 
     this.init()
   }
@@ -100,8 +101,11 @@ class Game {
   }
 
   checkIfObstacleIsOnTheGround(obstacle, i) {
-    if (obstacle.y >= this.boardHeight + this.rankBoard)
+    if (obstacle.y >= this.boardHeight) {
       this.deleteObstacle(i)
+      this.lifes--
+      this.checkLifes()
+    }
   }
 
   detectObstaclesInTheBasket() {
@@ -154,6 +158,42 @@ class Game {
     if (this.score === 25) this.levelUp()
   }
 
+  checkLifes() {
+    if (this.lifes === 0) {
+      this.board.innerHTML = ''
+      this.rankBoard.innerHTML = ''
+      this.container.innerHTML = ''
+      this.gameInterval = null
+      const text = document.createElement('div')
+      const buttonYes = document.createElement('button')
+      const buttonNo = document.createElement('button')
+      text.innerText = 'Do you wanna play again?'
+      text.style.color = 'white'
+      text.style.textTransform = 'uppercase'
+      text.style.fontSize = '50px'
+      text.style.margin = '0 auto'
+      text.style.backgroundColor = 'black'
+      text.style.textAlign = 'center'
+      buttonYes.innerText = 'Yes'
+      buttonNo.innerText = 'No'
+      buttonYes.style.height = '30px'
+      buttonNo.style.height = '30px'
+      this.container.appendChild(text)
+      this.container.appendChild(buttonYes)
+      this.container.appendChild(buttonNo)
+      this.container.style.display = 'flex'
+      this.container.style.flexDirection = 'column'
+
+      buttonYes.addEventListener('click', () => {
+        this.container.innerHTML = ''
+        this.board.innerHTML = ''
+        this.rankBoard.innerHTML = ''
+        this.lifes = 3
+        this.init()
+      })
+    }
+  }
+
   levelUp() {
     this.level++
     this.speed = this.speed - 25
@@ -164,12 +204,11 @@ class Game {
   gameTick() {
     if (this.tickCount === 0) this.addObstacle()
 
-    this.tickCount++
     this.detectObstaclesInTheBasket()
     this.moveObstacles()
+    this.tickCount++
 
-
-    if (this.tickCount > 10) this.tickCount = 0
+    if (this.tickCount > 30) this.tickCount = 0
   }
 
   startGameInterval() {
@@ -181,7 +220,7 @@ class Game {
     this.rankBoard.innerHTML = `<div>
     Your score is: ${this.score}</div>
     <div>Level: ${this.level}</div>
-    <div>Lifes: ***</div>
+    <div>Lifes: ${this.lifes}</div>
     `
     this.board.appendChild(this.basket.render())
 
