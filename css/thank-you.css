@@ -81,7 +81,8 @@ body {
 }
 
 .game-container {
-  height: 400px;
+  box-sizing: content-box;
+  height: 425px;
   width: 400px;
   margin: 0 auto 50px auto;
   position: relative;

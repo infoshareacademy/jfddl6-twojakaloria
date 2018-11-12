@@ -21,6 +21,8 @@ class Game {
     this.tickCount = 0
     this.speed = 200
 
+    this.level = 1;
+
     this.init()
   }
 
@@ -47,15 +49,18 @@ class Game {
     this.rankBoard.style.width = this.rankBoardWidth + 'px'
     this.rankBoard.style.backgroundColor = 'black'
     this.rankBoard.style.color = 'white'
-    this.rankBoard.style.textAlign = 'center'
     this.rankBoard.style.margin = '0 auto'
+    this.rankBoard.style.display = 'flex'
+    this.rankBoard.style.justifyContent = 'space-between'
+    this.rankBoard.style.zIndex = '5'
     this.container.appendChild(this.rankBoard)
   }
+
 
   createBasket() {
     return new Basket(
       this.boardWidth - this.basketDimension / 2,
-      this.boardHeight - this.basketDimension,
+      this.boardHeight - this.basketDimension + this.rankBoardHeight,
       this.basketDimension
     )
   }
@@ -95,7 +100,7 @@ class Game {
   }
 
   checkIfObstacleIsOnTheGround(obstacle, i) {
-    if (obstacle.y >= this.boardHeight - this.obstacleDimension)
+    if (obstacle.y >= this.boardHeight + this.rankBoard)
       this.deleteObstacle(i)
   }
 
@@ -139,6 +144,21 @@ class Game {
   scoreUp() {
     this.score++
     this.render()
+
+    this.checkScore()
+  }
+
+  checkScore() {
+    if (this.score === 5) this.levelUp()
+    if (this.score === 15) this.levelUp()
+    if (this.score === 25) this.levelUp()
+  }
+
+  levelUp() {
+    this.level++
+    this.speed = this.speed - 25
+    this.render()
+    this.startGameInterval()
   }
 
   gameTick() {
@@ -147,6 +167,7 @@ class Game {
     this.tickCount++
     this.detectObstaclesInTheBasket()
     this.moveObstacles()
+
 
     if (this.tickCount > 10) this.tickCount = 0
   }
@@ -157,7 +178,11 @@ class Game {
 
   render() {
     this.board.innerHTML = ''
-    this.rankBoard.innerText = this.score
+    this.rankBoard.innerHTML = `<div>
+    Your score is: ${this.score}</div>
+    <div>Level: ${this.level}</div>
+    <div>Lifes: ***</div>
+    `
     this.board.appendChild(this.basket.render())
 
     this.obstacles.forEach((obstacle, i) => {
@@ -203,7 +228,7 @@ class Basket {
 class Obstacle {
   constructor(maxX, maxY, obstacleDimension) {
     this.x = randomInt(0, maxX)
-    this.y = 0
+    this.y = 20
     this.maxY = maxY
     this.obstacleDimension = obstacleDimension
   }
@@ -218,6 +243,7 @@ class Obstacle {
     obstacleDiv.style.width = this.obstacleDimension + 'px'
     obstacleDiv.style.backgroundColor = 'black'
     obstacleDiv.style.position = 'absolute'
+    obstacleDiv.style.zIndex = '1'
     obstacleDiv.style.left = this.x + 'px'
     obstacleDiv.style.top = this.y + 'px'
 
