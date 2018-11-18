@@ -537,12 +537,12 @@ body {
 .section-team__link:hover {
   transform: scale(1.4);
 }
-
+/* 
 @media only screen and (max-width: 1400px) {
   .section-team__child {
     flex-basis: 33%;
   }
-}
+} */
 
 @media only screen and (max-width: 768px) {
   .section-team__child {
