@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 .section-thanks {
@@ -11,6 +12,8 @@ body {
   background-position: center;
   background-size: cover;
   height: 100%;
+  min-height: 100vh;
+
 }
 
 .section-thanks__container {
@@ -18,7 +21,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
 .section-thanks__container h1 {
@@ -41,7 +43,7 @@ body {
   font-size: 30px;
   transition: all 0.3s;
   text-align: center;
-  margin: 20px;
+  margin: 40px;
 }
 
 .section-thanks__button:hover {
@@ -78,6 +80,8 @@ body {
   padding: 10px;
   color: black;
   font-size: 25px;
+  text-align: center;
+  list-style-position: inside;
 }
 
 .game-container {
