@@ -17,6 +17,8 @@ class Game {
     this.obstacles = [];
     this.obstacleDimension = 40;
 
+    this.friends = []
+
     this.gameInterval = null;
     this.tickCount = 0;
     this.speed = 100;
@@ -92,16 +94,38 @@ class Game {
     );
   }
 
+  addFriend() {
+    this.friends = this.friends.concat(
+      new Friend(
+        this.boardWidth - this.obstacleDimension,
+        this.boardHeight - this.obstacleDimension,
+        this.obstacleDimension
+      )
+    )
+  }
+
   moveObstacles() {
     this.obstacles.forEach(obstacle => obstacle.moveDown());
 
     this.render();
   }
 
+  moveFriends() {
+    this.friends.forEach(friend => friend.moveDown())
+  }
+
+
   checkIfObstacleIsOnTheGround(obstacle, i) {
     if (obstacle.y >= this.boardHeight) {
       this.deleteObstacle(i);
       this.lifes--;
+      this.checkLifes();
+    }
+  }
+
+  checkIfFriendIsOnTheGround(friend, i) {
+    if (friend.y >= this.boardHeight) {
+      this.deleteFriend(i);
       this.checkLifes();
     }
   }
@@ -129,6 +153,29 @@ class Game {
     });
   }
 
+  detectFriendsInTheBasket() {
+    this.friends.forEach((friend, i) => {
+      const isColliding = this.detectCollision(
+        {
+          x: friend.x,
+          y: friend.y,
+          width: friend.obstacleDimension,
+          height: friend.obstacleDimension
+        },
+        {
+          x: this.basket.x,
+          y: this.basket.y,
+          width: this.basket.basketDimension,
+          height: this.basket.basketDimension
+        }
+      );
+
+      if (isColliding) {
+        this.catchFriendsInTheBasket(i)
+      }
+    });
+  }
+
   detectCollision(a, b) {
     return !(
       a.y + a.height < b.y ||
@@ -143,10 +190,21 @@ class Game {
     this.scoreUp();
   }
 
+  catchFriendsInTheBasket(i) {
+    this.deleteFriends(i);
+    this.scoreUp();
+  }
+
   deleteObstacle(i) {
     this.obstacles = this.obstacles
       .slice(0, i)
       .concat(this.obstacles.slice(i + 1));
+  }
+
+  deleteFriends(i) {
+    this.friends = this.friends
+      .slice(0, i)
+      .concat(this.friends.slice(i + 1));
   }
 
   scoreUp() {
@@ -207,9 +265,12 @@ class Game {
 
   gameTick() {
     if (this.tickCount === 0) this.addObstacle();
+    if (this.tickCount === 10) this.addFriend();
 
     this.detectObstaclesInTheBasket();
+    this.detectFriendsInTheBasket()
     this.moveObstacles();
+    this.moveFriends()
     this.tickCount++;
 
     if (this.tickCount > 30) this.tickCount = 0;
@@ -231,6 +292,11 @@ class Game {
     this.obstacles.forEach((obstacle, i) => {
       this.board.appendChild(obstacle.render());
       this.checkIfObstacleIsOnTheGround(obstacle, i);
+    });
+
+    this.friends.forEach((friend, i) => {
+      this.board.appendChild(friend.render());
+      this.checkIfObstacleIsOnTheGround(friend, i);
     });
   }
 }
@@ -296,6 +362,32 @@ class Obstacle {
   }
 }
 
+class Friend {
+  constructor(maxX, maxY, obstacleDimension) {
+    this.x = randomInt(0, maxX);
+    this.y = 20;
+    this.maxY = maxY;
+    this.obstacleDimension = obstacleDimension;
+  }
+
+  moveDown() {
+    this.y += 3;
+  }
+
+  render() {
+    const friendDiv = document.createElement("div");
+    friendDiv.style.height = this.obstacleDimension + "px";
+    friendDiv.style.width = this.obstacleDimension + "px";
+    friendDiv.style.background = "url('img/applle.png')";
+    friendDiv.style.backgroundRepeat = "no-repeat";
+    friendDiv.style.backgroundSize = "contain";
+    friendDiv.style.position = "absolute";
+    friendDiv.style.left = this.x + "px";
+    friendDiv.style.top = this.y + "px";
+
+    return friendDiv;
+  }
+}
 const randomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
 
