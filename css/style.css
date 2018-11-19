@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: normal;
+  color:white;
 }
 
 .active {
@@ -111,7 +112,7 @@ body {
 }
 
 .nav__item--active {
-  color: black;
+  color: white;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -222,7 +223,7 @@ body {
   text-transform: uppercase;
   margin-top: 30vh;
   text-align: center;
-  color: black;
+  color: white;
   font-size: 50px;
 }
 
@@ -237,7 +238,7 @@ body {
 .carouselle-item__p-item {
   text-align: center;
   margin-top: 5%;
-  color: black;
+  color: white;
   font-size: 30px;
 }
 
@@ -254,7 +255,7 @@ body {
   font-size: 20px;
   background: #0fb9b1;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 30px;
   transition: all 0.3s;
   z-index: 2;
@@ -459,7 +460,7 @@ body {
   justify-content: center;
   background: #0fb9b1;
   font-family: arial;
-  color: black;
+  color: white;
   overflow: hidden;
   padding: 70px;
 }
@@ -612,7 +613,7 @@ body {
   font-size: 20px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
-  color: black;
+  color: white;
   line-height: 1.25;
 }
 
