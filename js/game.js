@@ -118,15 +118,17 @@ class Game {
   checkIfObstacleIsOnTheGround(obstacle, i) {
     if (obstacle.y >= this.boardHeight) {
       this.deleteObstacle(i);
-      this.lifes--;
-      this.checkLifes();
+      console.log(obstacle)
     }
   }
 
   checkIfFriendIsOnTheGround(friend, i) {
     if (friend.y >= this.boardHeight) {
-      this.deleteFriend(i);
-      this.checkLifes();
+      this.deleteFriends(i);
+      this.lifes--
+      if (this.lifes === 0) {
+        this.checkLifes()
+      }
     }
   }
 
@@ -187,7 +189,9 @@ class Game {
 
   catchObstacleInTheBasket(i) {
     this.deleteObstacle(i);
-    this.scoreUp();
+    if (this.score > 0) {
+      this.scoreDown()  
+    }
   }
 
   catchFriendsInTheBasket(i) {
@@ -214,6 +218,11 @@ class Game {
     this.checkScore();
   }
 
+  scoreDown() {
+    this.score--;
+    this.render()
+    this.checkScore();
+  }
   checkScore() {
     if (this.score === 5) this.levelUp();
     if (this.score === 15) this.levelUp();
@@ -221,7 +230,6 @@ class Game {
   }
 
   checkLifes() {
-    if (this.lifes === 0) {
       this.board.innerHTML = "";
       this.rankBoard.innerHTML = "";
       this.container.innerHTML = "";
@@ -253,7 +261,7 @@ class Game {
       buttonNo.addEventListener("click", () => {
         alert("Thank You!");
       });
-    }
+    
   }
 
   levelUp() {
@@ -296,7 +304,7 @@ class Game {
 
     this.friends.forEach((friend, i) => {
       this.board.appendChild(friend.render());
-      this.checkIfObstacleIsOnTheGround(friend, i);
+      this.checkIfFriendIsOnTheGround(friend, i);
     });
   }
 }
