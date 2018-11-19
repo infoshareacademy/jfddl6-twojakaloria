@@ -3,14 +3,13 @@ const menuButton = document.querySelector('.button-box');
 const menuItems = document.querySelectorAll('.nav__item')
 const priceSec = document.querySelector('.section-price')
 const teamImg = document.querySelectorAll('.section-team__child')
-
+const team = document.querySelector('#team')
 
 /*
 Start of Animated images
 */
-
 window.addEventListener('scroll', () => {
-    let scrollPosition = window.scrollY + 3 * (menu.clientHeight)
+    let scrollPosition = window.scrollY + menu.clientHeight
     if (team.offsetTop - (priceSec.clientHeight / 2) <= scrollPosition) {
         teamImg.forEach(img => {
             img.classList.add('section-team__child--animated')
